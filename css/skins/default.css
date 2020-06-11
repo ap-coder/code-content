@@ -718,10 +718,14 @@ html .nav-pills-light > li.active > a:focus {
 .sort-source.sort-source-style-2 > li.active > a:after {
 	border-top-color: #0088CC;
 }
-
+/* Default settings
 .sort-source.sort-source-style-3 > li.active > a {
 	border-bottom-color: #0088CC !important;
 	color: #0088CC !important;
+} */
+.sort-source.sort-source-style-3 > li.active > a {
+	border-bottom-color: #AD1F25 !important;
+	color: #AD1F25 !important;
 }
 
 html .badge-primary {
