@@ -385,11 +385,11 @@ html .border-color-hover-light:hover {
 }
 
 .alternative-font {
-	color: #0088CC;
+	color: #AD1F25;
 }
 
 html .box-shadow-1-primary:before {
-	box-shadow: 0 30px 90px #0088CC !important;
+	box-shadow: 0 30px 90px #0088CC !AD1F25;
 }
 
 html .box-shadow-1-secondary:before {
@@ -5120,12 +5120,12 @@ html .feature-box-light .feature-box-icon {
 
 .feature-box.feature-box-style-2 .feature-box-icon [class*="fa-"],
 .feature-box.feature-box-style-2 .feature-box-icon .icons {
-	color: #0088CC;
+	color: #AD1F25;
 }
 
 html .feature-box-primary.feature-box-style-2 .feature-box-icon [class*="fa-"],
 html .feature-box-primary.feature-box-style-2 .feature-box-icon .icons {
-	color: #0088CC;
+	color: #AD1F25;
 }
 
 html .feature-box-secondary.feature-box-style-2 .feature-box-icon [class*="fa-"],
