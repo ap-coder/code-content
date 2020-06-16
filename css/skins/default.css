@@ -2502,11 +2502,11 @@ html .toggle-light.toggle-minimal .toggle.active > .toggle-title {
 .thumbnail .zoom,
 .img-thumbnail .zoom,
 .thumb-info-ribbon {
-	background-color: #0088CC;
+	background-color: #AE1F25;
 }
 
 html .thumb-info .thumb-info-action-icon-primary {
-	background-color: #0088CC;
+	background-color: #AE1F25;
 }
 
 html .thumb-info .thumb-info-action-icon-primary i {
@@ -2522,7 +2522,7 @@ html .thumb-info .thumb-info-action-icon-secondary i {
 }
 
 html .thumb-info .thumb-info-action-icon-tertiary {
-	background-color: #2BAAB1;
+	background-color: #AE1F25;
 }
 
 html .thumb-info .thumb-info-action-icon-tertiary i {
