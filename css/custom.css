@@ -336,4 +336,8 @@ html {
   #footer a:not(.btn) {
     color: #e1e1e1;
   }
+
+  html .progress-bar-primary {
+    background-color: #ae1f25;
+}
   /*# sourceMappingURL=custom.css.map */
