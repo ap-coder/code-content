@@ -125,7 +125,7 @@ a.cc-card {
             display: block;
             margin-top: -1rem;
             @media only screen and (max-width: $cc-breakpoint-lg) {
-                margin-top: -0.85rem;
+                margin-top: -0.95rem;
             }
             @media only screen and (max-width: $cc-breakpoint-md) {
                 margin-top: -0.7rem;
@@ -230,29 +230,6 @@ a.cc-card {
         margin: 0 auto;
     }
 }
-/*.comingsoon {
-    position: absolute;
-	background-image: none;
-	right: 0;
-	left: auto;
-	top: -15px;
-	text-shadow: none;
-	padding: 0 20px 0 20px;
-	height: 40px;
-	line-height: 40px;
-	display: inline-block;
-	text-align: center;
-	z-index: 10;
-	box-shadow: none;
-	font-size: 1em;
-	color: #FFF;
-    border-bottom: 2px solid transparent;
-    font-weight: bold;
-    box-shadow: -6px 6px 20px black;
-}
-.lightbackground {
-	background: rgb(144, 144, 144) !important;
-}*/
 .accordion.accordion-modern .card .card-header {
     background-color: $cc-color-alabaster-gray;
 }
