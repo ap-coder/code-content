@@ -1,5 +1,5 @@
-/* Add all your CSS customizations here*/
 @import "config/custom-variables";
+/* Add all your CSS customizations here*/
 html {
     font-size: 100%;
 }
@@ -225,18 +225,31 @@ a.cc-card {
 .home-concept strong {
     font-family: $cc-font-accent;
 }
-.owl-carousel .owl-stage .owl-item img {
-    @media only screen and (max-width: $cc-breakpoint-md) {
-        width: 150px;
-        margin: 0 auto;
-    }
-    @media only screen and (max-width: $cc-breakpoint-sm) {
-        width: 150px;
-        margin: 0 auto;
+.owl-carousel {
+    .owl-stage .owl-item img {
+        @media only screen and (max-width: $cc-breakpoint-md) {
+            width: 150px;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: $cc-breakpoint-sm) {
+            width: 150px;
+            margin: 0 auto;
+        }
     }
 }
 .accordion.accordion-modern .card .card-header {
     background-color: $cc-color-alabaster-gray;
+}
+.section-footer {
+    .owl-carousel.dots-title .owl-dots{
+        left: 195px;
+    }
+    .owl-carousel.dots-title.dots-title-pos-2 .owl-dots {
+        left: 215px;
+        @media only screen and (max-width: $cc-breakpoint-sm) {
+            left: 200px;
+        }
+    }
 }
 #footer {
     .footer-ribbon {
