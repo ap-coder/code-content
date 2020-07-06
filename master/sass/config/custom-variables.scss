@@ -1,0 +1,63 @@
+@import "variables";
+
+//breakpoints
+$cc-breakpoint-sm: 575px;
+$cc-breakpoint-md: 767px;
+$cc-breakpoint-lg: 991px;
+$cc-breakpoint-xl: 1199px;
+
+
+//font families
+$cc-font-headings: "Archivo Black", sans-serif;
+$cc-font-body: "Roboto", sans-serif;
+$cc-font-accent: "Permanent Marker", sans-serif;
+
+//font sizes
+//$cc-root-font-size: 18px;
+$cc-body-font-size: 1rem;
+
+$cc-font-size-h1-sm: 1.875rem;
+$cc-font-size-h2-sm: 1.563rem;
+$cc-font-size-h3-sm: 1.313rem;
+$cc-font-size-h4-sm: 1.125rem;
+
+$cc-font-size-h1-xs: 1.7rem;
+$cc-font-size-h2-xs: 1.418rem;
+$cc-font-size-h3-xs: 1.191rem;
+$cc-font-size-h4-xs: 1.02rem;
+
+//line heights
+$cc-line-height-h1-sm: 2rem;
+$cc-line-height-h2-sm: 1.7rem;
+$cc-line-height-h3-sm: 1.4rem;
+$cc-line-height-h4-sm: 1.2rem;
+
+$cc-line-height-h1-xs: 1.8rem;
+$cc-line-height-h2-xs: 1.5rem;
+$cc-line-height-h3-xs: 1.3rem;
+$cc-line-height-h4-xs: 1.1rem;
+
+//font weights defined in _variables.scss
+//spacing defined in _variables.scss
+//borders defined in _variables.scss
+
+//code color palette
+$cc-color-code-red: #ae2025;
+$cc-color-pure-black: #000000;
+$cc-color-codemed-blue: #00aeef;
+$cc-color-cinnabar-red: #ee2d2b;
+$cc-color-bright-sun-yellow: #fedc4b;
+$cc-color-dove-gray: #707070;
+$cc-color-mercury-gray: #e1e1e1;
+$cc-color-alabaster-gray: #f8f8f8;
+$cc-color-pure-white: #ffffff;
+
+//font colors
+$cc-color-font-default: $cc-color-pure-black;
+$cc-color-font-accent: $cc-color-code-red;
+$cc-color-font-reverse: $cc-color-pure-white;
+$cc-color-font-reverse-link: $cc-color-mercury-gray;
+
+//bg colors
+$cc-color-primary: $cc-color-code-red;
+//other theme colors defined in _variables.scss
