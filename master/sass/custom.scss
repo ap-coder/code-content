@@ -16,6 +16,7 @@ h5,
 h6 {
     font-family: $cc-font-headings;
     text-transform: none;
+    letter-spacing: normal;
 }
 h2, 
 h3,
@@ -192,6 +193,11 @@ a.cc-card {
         margin-left: 10px;
     }
 }
+.cc-full-width {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
 .home-intro {
     p {
         font-size: 1.6rem;
@@ -208,7 +214,8 @@ a.cc-card {
         display: none;
     }
 }
-.highlighted-word {
+.highlighted-word,
+.alternative-font {
     font-family: $cc-font-accent;
 }
 .home-intro p span:not(.highlighted-word) {
