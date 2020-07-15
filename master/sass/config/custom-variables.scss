@@ -6,7 +6,77 @@ $cc-breakpoint-md: 767px;
 $cc-breakpoint-lg: 991px;
 $cc-breakpoint-xl: 1199px;
 
+//breakpoint map
+$cc-breakpoints: (
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
 
+/*--RESPOND ABOVE--*/
+//@include respond-above(sm) {}
+@mixin respond-above($cc-breakpoint) {
+  //if breakpoint exists in map
+  @if map-has-key($cc-breakpoints, $cc-breakpoint) {
+    //get breakpoint value
+    $cc-breakpoint-value: map-get($cc-breakpoints, $cc-breakpoint);
+    //write media query
+    @media (min-width: $cc-breakpoint-value) {
+      @content;
+    }
+  //if breakpoint doesn't exist in map
+  } @else {
+    //log warning
+    @warn 'Invalid breakpoint: #{$cc-breakpoint}.';
+  }
+}
+
+/*--RESPOND BELOW--*/
+//@include respond-below(sm) {}
+@mixin respond-below($cc-breakpoint) {
+  //if breakpoint exists in map
+  @if map-has-key($cc-breakpoints, $cc-breakpoint) {
+    //get breakpoint value
+    $cc-breakpoint-value: map-get($cc-breakpoints, $cc-breakpoint);
+    //write media query
+    @media (max-width: ($cc-breakpoint-value - 1)) {
+      @content;
+    } 
+  //if breakpoint doesn't exist in map
+  } @else {
+    //log warning
+    @warn 'Invalid breakpoint: #{$cc-breakpoint}.';
+  }
+}
+
+/*--RESPOND BETWEEN--*/
+//@include respond-between(sm, md) {}
+@mixin respond-between($lower, $upper) {
+  //if both lower and upper breakpoints exist in map
+  @if map-has-key($cc-breakpoints, $lower) and map-has-key($cc-breakpoints, $upper) {
+    //get lower and upper breakpoints
+    $lower-cc-breakpoint: map-get($cc-breakpoints, $lower);
+    $upper-cc-breakpoint: map-get($cc-breakpoints, $upper);
+    //rite media query
+    @media (min-width: $lower-cc-breakpoint) and (max-width: ($upper-cc-breakpoint - 1)) {
+      @content;
+    }
+  //if one or both breakpoints don't exist
+  } @else {
+    //if lower breakpoint invalid
+    @if (map-has-key($cc-breakpoints, $lower) == false) {
+      //log warning
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    //if upper breakpoint invalid
+    @if (map-has-key($cc-breakpoints, $upper) == false) {
+      //log warning
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+  
 //font families
 $cc-font-headings: "Archivo Black", sans-serif;
 $cc-font-body: "Roboto", sans-serif;

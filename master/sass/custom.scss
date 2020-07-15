@@ -28,31 +28,32 @@ p {
 }
 h1 {
     color: $cc-color-code-red;
-    font-size: $cc-font-size-h1-sm;
+    font-size: $cc-font-size-h1-xs;
     line-height: $cc-line-height-h1-sm !important;
-    @media only screen and (max-width: $cc-breakpoint-sm) {
-        font-size: $cc-font-size-h1-xs;
+    @include respond-above(xs) {
+        font-size: $cc-font-size-h1-sm;
     }
 }
-h2 {
-    font-size: $cc-font-size-h2-sm;
+h2,
+h2.text-6 {
+    font-size: $cc-font-size-h2-xs !important;
     line-height: $cc-line-height-h2-sm;
-    @media only screen and (max-width: $cc-breakpoint-sm) {
-        font-size: $cc-font-size-h2-xs;
+    @include respond-above(xs) {
+        font-size: $cc-font-size-h2-sm !important;
     }
 }
 h3 {
-    font-size: $cc-font-size-h3-sm;
+    font-size: $cc-font-size-h3-xs;
     line-height: $cc-line-height-h3-sm;
-    @media only screen and (max-width: $cc-breakpoint-sm) {
-        font-size: $cc-font-size-h3-xs;
+    @include respond-above(xs) {
+        font-size: $cc-font-size-h3-sm;
     }
 }
 h4 {
-    font-size: $cc-font-size-h4-sm;
+    font-size: $cc-font-size-h4-xs;
     line-height: $cc-line-height-h4-sm;
-    @media only screen and (max-width: $cc-breakpoint-sm) {
-        font-size: $cc-font-size-h4-xs;
+    @include respond-above(xs) {
+        font-size: $cc-font-size-h4-sm;
     }
 }
 a:hover {
@@ -71,65 +72,71 @@ a.cc-card {
 }
 .cc-masthead {
     h1 {
-        font-size: 2.6em;
-        line-height: 2.8rem !important;
-        margin-left: -22rem;
-        margin-top: 5rem;
-        @media only screen and (max-width: $cc-breakpoint-xl) {
-            font-size: 2.3rem;
-            line-height: 2.4rem !important;
-            margin-left: -17rem;
-            margin-top: 4rem;
-        }
-        @media only screen and (max-width: $cc-breakpoint-lg) {
-            font-size: 2rem;
-            line-height: 2.1rem !important;
-            margin-left: -15rem;
-            margin-top: 0;
-        }
-        @media only screen and (max-width: $cc-breakpoint-md) {
+        font-size: 1.6rem;
+        line-height: 1.7rem !important;
+        @include respond-above(xs) {
             font-size: $cc-font-size-h1-xs;
             line-height: $cc-line-height-h1-xs !important;
             margin-left: 0;
             margin-top: 0;
         }
-        @media only screen and (max-width: $cc-breakpoint-sm) {
-            font-size: 1.6rem;
-            line-height: 1.7rem !important;
+        @include respond-above(sm) {
+            font-size: 2rem;
+            line-height: 2.1rem !important;
+            margin-left: -15rem;
+            margin-top: 0;
+        }
+        @include respond-above(md) {
+            font-size: 2.3rem;
+            line-height: 2.4rem !important;
+            margin-left: -17rem;
+            margin-top: 4rem;
+        }
+        @include respond-above(lg) {
+            font-size: 2.6em;
+            line-height: 2.8rem !important;
+            margin-left: -22rem;
+            margin-top: 5rem;
         }
         .word-rotator-words {
-            margin-top: 1.15rem;
-            font-size: 2.9rem;
-            line-height: 3.1rem;
-            @media only screen and (max-width: $cc-breakpoint-xl) {
-                margin-top: 1rem;
-                font-size: 2.5rem;
-                line-height: 2.6rem !important;
-            }
-            @media only screen and (max-width: $cc-breakpoint-lg) {
-                margin-top: 0.85rem;
-                font-size: 2.15rem;
-                line-height: 2.25rem !important;
-            }
-            @media only screen and (max-width: $cc-breakpoint-md) {
+            margin-top: 0.65rem;
+            font-size: 1.7rem;
+            line-height: 1.9rem !important;
+            @include respond-above(xs) {
                 margin-top: 0.7rem;
                 font-size: 1.9rem;
                 line-height: 2rem !important;
             }
-            @media only screen and (max-width: $cc-breakpoint-sm) {
-                margin-top: 0.65rem;
-                font-size: 1.7rem;
-                line-height: 1.8rem !important;
+            @include respond-above(sm) {
+                margin-top: 0.85rem;
+                font-size: 2.15rem;
+                line-height: 2.25rem !important;
+            }
+            @include respond-above(md) {
+                margin-top: 1rem;
+                font-size: 2.5rem;
+                line-height: 2.6rem !important;
+            }
+            @include respond-above(lg) {
+                margin-top: 1.15rem;
+                font-size: 2.9rem;
+                line-height: 3.1rem;
             }
         }
         .cc-last-line {
             display: block;
-            margin-top: -1.1rem;
-            @media only screen and (max-width: $cc-breakpoint-lg) {
+            margin-top: -0.7rem;
+            @include respond-above(xs) {
+                margin-top: -0.75rem;
+            }
+            @include respond-above(sm) {
+                margin-top: -0.8rem;
+            }
+            @include respond-above(md) {
                 margin-top: -0.95rem;
             }
-            @media only screen and (max-width: $cc-breakpoint-md) {
-                margin-top: -0.7rem;
+            @include respond-above(lg) {
+                margin-top: -1.1rem;
             }
         }
     }
@@ -141,9 +148,8 @@ a.cc-card {
         transition: border 0.5s ease;
         padding-bottom: 30px;
         &:first-of-type {
-            border-right: $cc-color-mercury-gray 1px solid;
-            @media only screen and (max-width: 767px) {
-                border-right: $cc-color-pure-white 1px solid;
+            @include respond-above(sm) {
+                border-right: $cc-color-mercury-gray 1px solid;
             }
         }
         &:hover,
@@ -156,7 +162,7 @@ a.cc-card {
         }
         &:last-of-type:hover,
         &:last-of-type:active {
-            @media only screen and (min-width: 768px) {
+            @include respond-above(sm) {
                 border-left: $cc-color-pure-white 1px solid;
             }
         }
@@ -170,15 +176,15 @@ a.cc-card {
     }
 }
 .cc-masthead-image-col {
-    min-height: 300px;
-    @media only screen and (max-width: $cc-breakpoint-lg) {
-        min-height: 200px;
-    }
-    @media only screen and (max-width: $cc-breakpoint-sm) {
+    min-height: 220px;
+    @include respond-above(xs) {
         min-height: 250px;
     }
-    @media only screen and (max-width: 400px) {
-        min-height: 220px;
+    @include respond-above(sm) {
+        min-height: 200px;
+    }
+    @include respond-above(md) {
+        min-height: 300px;
     }
     img {
         margin: 0;
@@ -197,6 +203,56 @@ a.cc-card {
     margin: 0;
     padding: 0;
     max-width: 100%;
+}
+.cc-masthead-secondary-page {
+    .cc-masthead-col-img-bg-gradient {
+        background: rgb(239,239,239);
+        background: -moz-linear-gradient(60deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(60deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(60deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efefef",endColorstr="#ffffff",GradientType=1);
+        img {
+            display: inline-block;
+            @media only screen and (max-width: 1030px) {
+                width: 96%;
+                margin: 0 2%;
+            }
+        }
+        img.cc-masthead-img-sm {
+            width: 65%;
+            margin: 0 22.5%;
+            @include respond-above(xs) {
+                width: 61%;
+                margin: 0 19.5%;
+            }
+            @include respond-above(sm) {
+                width: 60%;
+                margin: 0 20%;
+            }
+            @include respond-above(md) {
+                width: 56%;
+                margin: 0 22%;
+            }
+            @include respond-above(lg) {
+                width: unset;
+            }
+        }
+    }
+    .cc-masthead-col-brand {
+        background-color: $cc-color-pure-black;
+        svg {
+            width: 90%;
+            margin-left: 6%;
+            @include respond-above(xs) {
+                width: 85%;
+                margin-left: 9%;
+            }
+            @include respond-above(lg) {
+                width: 80%;
+                margin-left: 12%;
+            }
+        }
+    }
 }
 .home-intro {
     p {
@@ -234,11 +290,7 @@ a.cc-card {
 }
 .owl-carousel {
     .owl-stage .owl-item img {
-        @media only screen and (max-width: $cc-breakpoint-md) {
-            width: 150px;
-            margin: 0 auto;
-        }
-        @media only screen and (max-width: $cc-breakpoint-sm) {
+        @include respond-below(sm) {
             width: 150px;
             margin: 0 auto;
         }
@@ -249,12 +301,15 @@ a.cc-card {
 }
 .section-footer {
     .owl-carousel.dots-title .owl-dots{
-        left: 195px;
+        left: 166px;
+        @include respond-above(xs) {
+            left: 176px;
+        }
     }
     .owl-carousel.dots-title.dots-title-pos-2 .owl-dots {
-        left: 215px;
-        @media only screen and (max-width: $cc-breakpoint-sm) {
-            left: 200px;
+        left: 185px;
+        @include respond-above(xs) {
+            left: 195px;
         }
     }
 }
