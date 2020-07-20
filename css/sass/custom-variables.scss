@@ -80,6 +80,17 @@ $cc-font-headings: "Archivo Black", sans-serif;
 $cc-font-body: "Roboto", sans-serif;
 $cc-font-accent: "Permanent Marker", sans-serif;
 
+//font weights
+$cc-font-weight-thin: 100;
+$cc-font-weight-extra-light: 200;
+$cc-font-weight-light: 300;
+$cc-font-weight-regular: 400;
+$cc-font-weight-medium: 500;
+$cc-font-weight-semi-bold: 600;
+$cc-font-weight-bold: 700;
+$cc-font-weight-extra-bold: 800;
+$cc-font-weight-black: 900;
+
 //font sizes
 //$cc-root-font-size: 18px;
 $cc-body-font-size: 1rem;
@@ -105,9 +116,9 @@ $cc-line-height-h2-xs: 1.5rem;
 $cc-line-height-h3-xs: 1.3rem;
 $cc-line-height-h4-xs: 1.1rem;
 
-//font weights defined in _variables.scss
-//spacing defined in _variables.scss
-//borders defined in _variables.scss
+//font weights defined in master/sass/config/_variables.scss
+//spacing defined in master/sass/config/_variables.scss
+//borders defined in master/sass/config/_variables.scss
 
 //code color palette
 $cc-color-code-red: #ae2025;
@@ -128,4 +139,4 @@ $cc-color-font-reverse-link: $cc-color-mercury-gray;
 
 //bg colors
 $cc-color-primary: $cc-color-code-red;
-//other theme colors defined in _variables.scss
+//other theme colors defined in master/sass/config/_variables.scss

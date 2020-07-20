@@ -1,11 +1,9 @@
-/*-- SASS output (from custom-compiled.scss) --*/
+/*-- SASS output (from sass/custom-compiled.scss) --*/
 html { font-size: 100%; }
 
-body { font-family: "Roboto", sans-serif; font-size: 1rem; min-width: 380px; }
+body { font-family: "Roboto", sans-serif; font-size: 1rem; min-width: 380px; color: #000000; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Archivo Black", sans-serif; text-transform: none; letter-spacing: normal; }
-
-h2, h3, h4, h5, h6, p { color: #000000; }
 
 h1 { color: #ae2025; font-size: 1.7rem; line-height: 2rem !important; }
 
@@ -153,5 +151,5 @@ a.cc-card { display: block; }
 
 #footer a:not(.btn) { color: #e1e1e1; }
 
-/*-- END SASS output (from custom-compiled.scss) --*/
+/*-- END SASS output (from sass/custom-compiled.scss) --*/
 /*# sourceMappingURL=custom-compiled.css.map */
