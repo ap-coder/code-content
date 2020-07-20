@@ -1,5 +1,5 @@
-@import "config/custom-variables";
-/* Add all your CSS customizations here*/
+@import "custom-variables";
+/*-- SASS output (from sass/custom-compiled.scss) --*/
 html {
     font-size: 100%;
 }
@@ -10,19 +10,19 @@ body {
 }
 h1, 
 h2, 
-h3,
-h4,
-h5,
-h6 {
+h3, 
+h4, 
+h5, 
+h6 { 
     font-family: $cc-font-headings;
     text-transform: none;
     letter-spacing: normal;
 }
 h2, 
-h3,
-h4,
-h5,
-h6,
+h3, 
+h4, 
+h5, 
+h6, 
 p {
     color: $cc-color-font-default;
 }
@@ -34,7 +34,7 @@ h1 {
         font-size: $cc-font-size-h1-sm;
     }
 }
-h2,
+h2, 
 h2.text-6 {
     font-size: $cc-font-size-h2-xs !important;
     line-height: $cc-line-height-h2-sm;
@@ -120,7 +120,7 @@ a.cc-card {
             @include respond-above(lg) {
                 margin-top: 1.15rem;
                 font-size: 2.9rem;
-                line-height: 3.1rem;
+                line-height: 3.1rem !important;
             }
         }
         .cc-last-line {
@@ -313,6 +313,11 @@ a.cc-card {
         }
     }
 }
+.image-style-side img {
+    float: right;
+    padding: 7px;
+    padding-right: 0;
+}
 #footer {
     .footer-ribbon {
         span {
@@ -326,3 +331,4 @@ a.cc-card {
         color: $cc-color-font-reverse-link;
     }
 }
+/*-- END SASS output (from sass/custom-compiled.scss) --*/

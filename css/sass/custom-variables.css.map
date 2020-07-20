@@ -2,8 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "custom-variables.scss",
-        "_variables.scss"
+        "custom-variables.scss"
     ],
     "names": [],
     "file": "custom-variables.css"
