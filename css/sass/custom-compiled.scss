@@ -7,7 +7,21 @@ body {
     font-family: $cc-font-body;
     font-size: $cc-body-font-size;
     min-width: 380px;
+}
+html.boxed .body {
+    min-width: 380px;
+}
+body,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     color: $cc-color-font-default;
+}
+img { 
+	image-rendering: -webkit-optimize-contrast;
 }
 h1, 
 h2, 
@@ -307,9 +321,37 @@ a.cc-card {
     }
 }
 .image-style-side img {
-    float: right;
-    padding: 7px;
-    padding-right: 0;
+    width: 65%;
+    margin: 7px 16%;
+    @media only screen and (min-width: 400px) {
+        width: 61%;
+        margin: 7px 17%;
+    }
+    @media only screen and (min-width: 420px) {
+        width: 58%;
+        margin: 7px 19%;
+    }
+    @media only screen and (min-width: 440px) {
+        width: 56%;
+        margin: 7px 21%;
+    }
+    @media only screen and (min-width: 460px) {
+        width: 52%;
+        margin: 7px 23%;
+    }
+    @media only screen and (min-width: 480px) {
+        width: 50%;
+        margin: 7px 24%;
+    }
+    @media only screen and (min-width: 500px) {
+        float: right;
+        width: 40%;
+        margin: 7px 12px;
+        margin-right: 0;
+    }
+    @media only screen and (min-width: 540px) {
+        width: unset;
+    }
 }
 #footer {
     .footer-ribbon {

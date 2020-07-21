@@ -1,7 +1,13 @@
 /*-- SASS output (from sass/custom-compiled.scss) --*/
 html { font-size: 100%; }
 
-body { font-family: "Roboto", sans-serif; font-size: 1rem; min-width: 380px; color: #000000; }
+body { font-family: "Roboto", sans-serif; font-size: 1rem; min-width: 380px; }
+
+html.boxed .body { min-width: 380px; }
+
+body, h2, h3, h4, h5, h6, p { color: #000000; }
+
+img { image-rendering: -webkit-optimize-contrast; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Archivo Black", sans-serif; text-transform: none; letter-spacing: normal; }
 
@@ -143,7 +149,21 @@ a.cc-card { display: block; }
 
 @media (min-width: 576px) { .section-footer .owl-carousel.dots-title.dots-title-pos-2 .owl-dots { left: 195px; } }
 
-.image-style-side img { float: right; padding: 7px; padding-right: 0; }
+.image-style-side img { width: 65%; margin: 7px 16%; }
+
+@media only screen and (min-width: 400px) { .image-style-side img { width: 61%; margin: 7px 17%; } }
+
+@media only screen and (min-width: 420px) { .image-style-side img { width: 58%; margin: 7px 19%; } }
+
+@media only screen and (min-width: 440px) { .image-style-side img { width: 56%; margin: 7px 21%; } }
+
+@media only screen and (min-width: 460px) { .image-style-side img { width: 52%; margin: 7px 23%; } }
+
+@media only screen and (min-width: 480px) { .image-style-side img { width: 50%; margin: 7px 24%; } }
+
+@media only screen and (min-width: 500px) { .image-style-side img { float: right; width: 40%; margin: 7px 12px; margin-right: 0; } }
+
+@media only screen and (min-width: 540px) { .image-style-side img { width: unset; } }
 
 #footer .footer-ribbon span { font-family: "Permanent Marker", sans-serif; }
 
