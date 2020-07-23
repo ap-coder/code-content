@@ -149,21 +149,21 @@ a.cc-card { display: block; }
 
 @media (min-width: 576px) { .section-footer .owl-carousel.dots-title.dots-title-pos-2 .owl-dots { left: 195px; } }
 
-.image-style-side img { width: 65%; margin: 7px 16%; }
+.image-style-side { width: 65%; margin: 7px 16%; }
 
-@media only screen and (min-width: 400px) { .image-style-side img { width: 61%; margin: 7px 17%; } }
+@media only screen and (min-width: 400px) { .image-style-side { width: 61%; margin: 7px 17%; } }
 
-@media only screen and (min-width: 420px) { .image-style-side img { width: 58%; margin: 7px 19%; } }
+@media only screen and (min-width: 420px) { .image-style-side { width: 58%; margin: 7px 19%; } }
 
-@media only screen and (min-width: 440px) { .image-style-side img { width: 56%; margin: 7px 21%; } }
+@media only screen and (min-width: 440px) { .image-style-side { width: 56%; margin: 7px 21%; } }
 
-@media only screen and (min-width: 460px) { .image-style-side img { width: 52%; margin: 7px 23%; } }
+@media only screen and (min-width: 460px) { .image-style-side { width: 52%; margin: 7px 23%; } }
 
-@media only screen and (min-width: 480px) { .image-style-side img { width: 50%; margin: 7px 24%; } }
+@media only screen and (min-width: 480px) { .image-style-side { width: 50%; margin: 7px 24%; } }
 
-@media only screen and (min-width: 500px) { .image-style-side img { float: right; width: 40%; margin: 7px 12px; margin-right: 0; } }
+@media only screen and (min-width: 500px) { .image-style-side { float: right; width: 40%; margin: 7px 12px; margin-right: 0; } }
 
-@media only screen and (min-width: 540px) { .image-style-side img { width: unset; } }
+@media only screen and (min-width: 540px) { .image-style-side { width: unset; } }
 
 #footer .footer-ribbon span { font-family: "Permanent Marker", sans-serif; }
 
