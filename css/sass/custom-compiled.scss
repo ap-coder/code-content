@@ -33,7 +33,8 @@ h6 {
     text-transform: none;
     letter-spacing: normal;
 }
-h1 {
+h1,
+h1.text-8 {
     color: $cc-color-code-red;
     font-size: $cc-font-size-h1-xs;
     line-height: $cc-line-height-h1-sm !important;
@@ -280,6 +281,7 @@ a.cc-card {
 .highlighted-word,
 .alternative-font {
     font-family: $cc-font-accent;
+    color: $cc-color-font-accent;
 }
 .home-intro p span:not(.highlighted-word) {
     font-size: 0.9em;
