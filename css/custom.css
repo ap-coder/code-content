@@ -177,3 +177,7 @@ a.cc-card { display: block; }
 .lightbackground { background: rgb(144, 144, 144) !important; }
 .drip-content .drip-scroll { overflow-y: scroll !important; max-height: -webkit-calc(80vh - 139px) !important; max-height: calc(80vh - 139px) !important; }
 html .progress-bar-primary { background-color: #ae1f25; }
+
+.thumb-info {display: block; position: relative; text-decoration: none; max-width: 100%; background-color: #FFF; border-radius: 4px; overflow: visible; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: translate3d(0, 0, 0); } 
+.thumb-info .thumb-info-wrapper {-webkit-backface-visibility: hidden; backface-visibility: hidden; transform: translate3d(0, 0, 0); border-radius: 4px; margin: 0; overflow: initial!important; display: block; position: relative; }
+.thumb-info .thumb-info-title {transition: all 0.3s; background: rgba(33, 37, 41, 0.8); color: #FFF; font-weight: 600; left: 0; letter-spacing: -.05em; position: absolute; z-index: 2; max-width: 90%; font-size: 17px; padding: 13px 21px 2px; bottom: -0%!important; }
