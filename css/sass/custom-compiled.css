@@ -9,7 +9,7 @@ body, h2, h3, h4, h5, h6, p { color: #000000; }
 
 img { image-rendering: -webkit-optimize-contrast; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Archivo Black", sans-serif; text-transform: none; letter-spacing: normal; }
+h1, h2, h3, h4, h5, h6 { font-family: "Archivo Black", sans-serif; text-transform: none; letter-spacing: normal; font-weight: 500 !important; }
 
 h1, h1.text-8 { color: #ae2025; font-size: 1.7rem; line-height: 2rem !important; }
 
@@ -32,6 +32,8 @@ a:hover { text-decoration: none; }
 html .bg-color-primary, html .bg-primary { background-color: #ae2025 !important; }
 
 html .text-color-dark, html .text-dark { color: #000000 !important; }
+
+.font-weight-bold { font-weight: 500 !important; }
 
 a.cc-card { display: block; }
 

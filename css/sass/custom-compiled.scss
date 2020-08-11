@@ -32,6 +32,7 @@ h6 {
     font-family: $cc-font-headings;
     text-transform: none;
     letter-spacing: normal;
+    font-weight: $cc-font-weight-medium !important;
 }
 h1,
 h1.text-8 {
@@ -74,6 +75,9 @@ html .bg-primary {
 html .text-color-dark, 
 html .text-dark {
     color: $cc-color-pure-black !important;
+}
+.font-weight-bold {
+    font-weight: $cc-font-weight-medium !important;
 }
 a.cc-card {
     display: block;
