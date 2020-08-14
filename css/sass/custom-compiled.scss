@@ -76,6 +76,9 @@ html .text-color-dark,
 html .text-dark {
     color: $cc-color-pure-black !important;
 }
+.btn {
+    text-transform: uppercase;
+}
 .font-weight-bold {
     font-weight: $cc-font-weight-medium !important;
 }
