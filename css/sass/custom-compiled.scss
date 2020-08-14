@@ -287,6 +287,9 @@ a.cc-card {
     font-family: $cc-font-accent;
     color: $cc-color-font-accent;
 }
+.alternative-font {
+    color: $cc-color-code-red;
+}
 .home-intro p span:not(.highlighted-word) {
     font-size: 0.9em;
     font-weight: $cc-font-weight-regular;

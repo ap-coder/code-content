@@ -131,6 +131,8 @@ a.cc-card { display: block; }
 
 .highlighted-word, .alternative-font { font-family: "Permanent Marker", sans-serif; color: #ae2025; }
 
+.alternative-font { color: #ae2025; }
+
 .home-intro p span:not(.highlighted-word) { font-size: 0.9em; font-weight: 400; opacity: 1; }
 
 .lead { font-weight: 600; }
