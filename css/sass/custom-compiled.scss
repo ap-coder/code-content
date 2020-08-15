@@ -76,6 +76,9 @@ html .text-color-dark,
 html .text-dark {
     color: $cc-color-pure-black !important;
 }
+.btn {
+    text-transform: uppercase;
+}
 .font-weight-bold {
     font-weight: $cc-font-weight-medium !important;
 }
@@ -286,6 +289,9 @@ a.cc-card {
 .alternative-font {
     font-family: $cc-font-accent;
     color: $cc-color-font-accent;
+}
+.alternative-font {
+    color: $cc-color-code-red;
 }
 .home-intro p span:not(.highlighted-word) {
     font-size: 0.9em;
