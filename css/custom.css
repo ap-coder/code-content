@@ -137,6 +137,8 @@ a.cc-card { display: block; }
 
 .alternative-font { color: #ae2025; }
 
+.bg-primary .highlighted-word { color: #ffffff; }
+
 .home-intro p span:not(.highlighted-word) { font-size: 0.9em; font-weight: 400; opacity: 1; }
 
 .lead { font-weight: 600; }
@@ -182,7 +184,7 @@ a.cc-card { display: block; }
 
 .shop .products .product .comingsoon { position: absolute; background-image: none; right: 0; left: auto; top: -15px; text-shadow: 1px 1px #000000; padding: 0 20px 0 20px; height: 40px; line-height: 40px; display: inline-block; text-align: center; z-index: 10; box-shadow: none; font-size: 1em; color: #FFF; border-bottom: 2px solid transparent; font-weight: bold; box-shadow: -4px 4px 20px black; }
 .stroke { -webkit-text-stroke: .5px black; -webkit-text-fill-color: white; }
-.lightbackground { background: rgb(144, 144, 144) !important; }
+ 
 .drip-content .drip-scroll { overflow-y: scroll !important; max-height: -webkit-calc(80vh - 139px) !important; max-height: calc(80vh - 139px) !important; }
 html .progress-bar-primary { background-color: #ae1f25; }
 
@@ -190,3 +192,8 @@ html .progress-bar-primary { background-color: #ae1f25; }
 .thumb-info .thumb-info-wrapper {-webkit-backface-visibility: hidden; backface-visibility: hidden; transform: translate3d(0, 0, 0); border-radius: 4px; margin: 0; overflow: initial!important; display: block; position: relative; }
 .thumb-info .thumb-info-title {transition: all 0.3s; background: rgba(33, 37, 41, 0.8); color: #FFF; font-weight: 600; left: 0;letter-spacing:normal; position: absolute; z-index: 2; max-width: 90%; font-size: 17px; padding: 13px 21px 2px; bottom: -0%!important; }
 p .alternative-font {letter-spacing:normal; }
+
+span.thumb-info-title.lightbackground { background-color:hsl(0,0%,50%, 0.5)!important} 
+div#current>div>div>div:nth-child(2)>span>span>a>span { background-color:hsl(0,0%,50%, 0.5)!important} 
+span.thumb-info-inner { color:rgb(255, 255, 255, 1)!important }
+span.ct-active>span:nth-child(1){ color:rgb(255, 255, 255, 1)!important }

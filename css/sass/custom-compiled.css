@@ -137,6 +137,8 @@ a.cc-card { display: block; }
 
 .alternative-font { color: #ae2025; }
 
+.bg-primary .highlighted-word { color: #ffffff; }
+
 .home-intro p span:not(.highlighted-word) { font-size: 0.9em; font-weight: 400; opacity: 1; }
 
 .lead { font-weight: 600; }
