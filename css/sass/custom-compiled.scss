@@ -293,6 +293,9 @@ a.cc-card {
 .alternative-font {
     color: $cc-color-code-red;
 }
+.bg-primary .highlighted-word {
+    color: $cc-color-pure-white;
+}
 .home-intro p span:not(.highlighted-word) {
     font-size: 0.9em;
     font-weight: $cc-font-weight-regular;
