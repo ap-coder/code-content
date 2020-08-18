@@ -11,6 +11,9 @@ body {
 html.boxed .body {
     min-width: 380px;
 }
+a[href="#"] {
+    cursor: default;
+} 
 body,
 h2,
 h3,
