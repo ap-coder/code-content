@@ -5,6 +5,10 @@ body { font-family: "Roboto", sans-serif; font-size: 1rem; min-width: 380px; }
 
 html.boxed .body { min-width: 380px; }
 
+p a { color: #ae2025; }
+
+p a:hover { color: #ee2d2b; }
+
 a[href="#"] { cursor: default; }
 
 body, h2, h3, h4, h5, h6, p { color: #000000; }

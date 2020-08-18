@@ -5,6 +5,10 @@ body { font-family: "Roboto", sans-serif; font-size: 1rem; min-width: 380px; }
 
 html.boxed .body { min-width: 380px; }
 
+p a { color: #ae2025; }
+
+p a:hover { color: #ee2d2b; }
+
 a[href="#"] { cursor: default; }
 
 body, h2, h3, h4, h5, h6, p { color: #000000; }
@@ -180,6 +184,7 @@ a.cc-card { display: block; }
 #footer p { color: #ffffff; }
 
 #footer a:not(.btn) { color: #e1e1e1; }
+
 /*-- END SASS output (from sass/custom-compiled.scss) --*/
 
 .shop .products .product .comingsoon { position: absolute; background-image: none; right: 0; left: auto; top: -15px; text-shadow: 1px 1px #000000; padding: 0 20px 0 20px; height: 40px; line-height: 40px; display: inline-block; text-align: center; z-index: 10; box-shadow: none; font-size: 1em; color: #FFF; border-bottom: 2px solid transparent; font-weight: bold; box-shadow: -4px 4px 20px black; }
