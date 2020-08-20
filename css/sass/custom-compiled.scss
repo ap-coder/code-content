@@ -15,7 +15,7 @@ p a {
     color: $cc-color-code-red;
 }
 p a:hover {
-    color: $cc-color-cinnabar-red;
+    color: $cc-color-cinnabar-red; //brighter red to indicate hover state
 }
 a[href="#"] {
     cursor: default;

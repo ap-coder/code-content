@@ -7,7 +7,7 @@ html.boxed .body { min-width: 380px; }
 
 p a { color: #ae2025; }
 
-p a:hover { color: #ee2d2b; }
+p a:hover { color: #ee2d2b; } /*brighter red to indicate hover state*/
 
 a[href="#"] { cursor: default; }
 
