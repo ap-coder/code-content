@@ -344,6 +344,17 @@ a.cc-card {
         }
     }
 }
+.cc-row-code-alliance-partners {
+    img {
+        width: 150px;
+    }
+    .cc-logo-code-alliance {
+        width: 150px;
+        @include respond-above(md) {
+            width: 300px;
+        }
+    }
+}
 .image-style-side {
     width: 65%;
     margin: 7px 16%;

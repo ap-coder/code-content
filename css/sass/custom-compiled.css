@@ -163,6 +163,12 @@ a.cc-card { display: block; }
 
 @media (min-width: 576px) { .section-footer .owl-carousel.dots-title.dots-title-pos-2 .owl-dots { left: 195px; } }
 
+.cc-row-code-alliance-partners img { width: 150px; }
+
+.cc-row-code-alliance-partners .cc-logo-code-alliance { width: 150px; }
+
+@media (min-width: 992px) { .cc-row-code-alliance-partners .cc-logo-code-alliance { width: 300px; } }
+
 .image-style-side { width: 65%; margin: 7px 16%; }
 
 @media only screen and (min-width: 400px) { .image-style-side { width: 61%; margin: 7px 17%; } }
