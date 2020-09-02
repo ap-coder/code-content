@@ -344,6 +344,82 @@ a.cc-card {
         }
     }
 }
+
+//--PRODUCT CHICLETS AND LABELS--//
+.cc-product-chiclet {
+    font-size: 23px;
+    background-image: none; 
+    height: 30px;
+    line-height: 30px;
+    padding: 1px 7.5px;
+    display: inline-block;
+    z-index: 10;
+    box-shadow: none;
+    color: $cc-color-pure-white;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+    background: $cc-color-pure-black;
+    text-transform: uppercase;
+    &.cc-eol,
+    &.cc-discontinued {
+        font-style: italic !important;
+    }
+    &.cc-new, 
+    &.cc-pre-order,
+    &.cc-coming-soon {
+        background: $cc-color-new-product-green;
+    }
+    &.cc-sale {
+        background: $cc-color-cinnabar-red;
+    }
+    @media (min-width: 576px) {
+        font-size: 1rem;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 5px;
+    }
+}
+.thumb-info {
+    .thumb-info-title {
+        background: rgba(33, 37, 41, 0.4);
+        letter-spacing: normal;
+        font-size: 23px;
+        width: 100%;
+        @media (min-width: 576px) {
+            font-size: 17px;
+        }
+        @media (min-width: 768px) {
+            font-size: 23px;
+        }
+        @media (min-width: 992px) {
+            font-size: 14px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
+    }
+    .thumb-info-type {
+        margin: 0 0 -2px -10px;
+        width: 65%;
+        border-radius: unset;
+        @media (min-width: 576px) { 
+            width: 80%;
+        }
+        @media (min-width: 768px) { 
+            width: 82%;
+        }
+        @media (min-width: 992px) { 
+            width: 90%;
+        }
+    }
+}
+.isotope-item.product {
+    @media (max-width: 767px) {
+        text-align: left;
+    }
+}
+//--END PRODUCT CHICLETS AND LABELS--//
+
 .cc-row-code-alliance-partners {
     img {
         width: 150px;
@@ -355,6 +431,8 @@ a.cc-card {
         }
     }
 }
+
+//--BLOG AND NEWS POST IMAGES--//
 .image-style-side {
     width: 65%;
     margin: 7px 16%;
@@ -388,6 +466,9 @@ a.cc-card {
         width: unset;
     }
 }
+//--END BLOG AND NEWS POST IMAGES--//
+
+//--FOOTER--//
 #footer {
     .footer-ribbon {
         span {
@@ -401,4 +482,5 @@ a.cc-card {
         color: $cc-color-font-reverse-link;
     }
 }
+//--END FOOTER--//
 /*-- END SASS output (from sass/custom-compiled.scss) --*/
