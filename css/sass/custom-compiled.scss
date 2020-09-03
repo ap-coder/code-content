@@ -353,12 +353,13 @@ a.cc-card {
     line-height: 30px;
     padding: 1px 7.5px;
     display: inline-block;
+    position: absolute;
+    top: 0 !important;
     z-index: 10;
     box-shadow: none;
     color: $cc-color-pure-white;
-    border-bottom: 2px solid transparent;
-    font-weight: bold;
     background: $cc-color-pure-black;
+    font-weight: bold;
     text-transform: uppercase;
     &.cc-eol,
     &.cc-discontinued {
@@ -376,6 +377,7 @@ a.cc-card {
         font-size: 1rem;
         height: 25px;
         line-height: 25px;
+        top: 25px;
         padding: 0 5px;
     }
 }
@@ -385,6 +387,7 @@ a.cc-card {
         letter-spacing: normal;
         font-size: 23px;
         width: 100%;
+        bottom: -4%;
         @media (min-width: 576px) {
             font-size: 17px;
         }

@@ -163,7 +163,7 @@ a.cc-card { display: block; }
 
 @media (min-width: 576px) { .section-footer .owl-carousel.dots-title.dots-title-pos-2 .owl-dots { left: 195px; } }
 
-.cc-product-chiclet { font-size: 23px; background-image: none; height: 30px; line-height: 30px; padding: 1px 7.5px; display: inline-block; z-index: 10; -webkit-box-shadow: none; box-shadow: none; color: #ffffff; border-bottom: 2px solid transparent; font-weight: bold; background: #000000; text-transform: uppercase; }
+.cc-product-chiclet { font-size: 23px; background-image: none; height: 30px; line-height: 30px; padding: 1px 7.5px; display: inline-block; position: absolute; top: 0 !important; z-index: 10; -webkit-box-shadow: none; box-shadow: none; color: #ffffff; background: #000000; font-weight: bold; text-transform: uppercase; }
 
 .cc-product-chiclet.cc-eol, .cc-product-chiclet.cc-discontinued { font-style: italic !important; }
 
@@ -171,9 +171,9 @@ a.cc-card { display: block; }
 
 .cc-product-chiclet.cc-sale { background: #ee2d2b; }
 
-@media (min-width: 576px) { .cc-product-chiclet { font-size: 1rem; height: 25px; line-height: 25px; padding: 0 5px; } }
+@media (min-width: 576px) { .cc-product-chiclet { font-size: 1rem; height: 25px; line-height: 25px; top: 25px; padding: 0 5px; } }
 
-.thumb-info .thumb-info-title { background: rgba(33, 37, 41, 0.4); letter-spacing: normal; font-size: 23px; width: 100%; }
+.thumb-info .thumb-info-title { background: rgba(33, 37, 41, 0.4); letter-spacing: normal; font-size: 23px; width: 100%; bottom: -4%; }
 
 @media (min-width: 576px) { .thumb-info .thumb-info-title { font-size: 17px; } }
 
@@ -220,8 +220,8 @@ a.cc-card { display: block; }
 #footer p { color: #ffffff; }
 
 #footer a:not(.btn) { color: #e1e1e1; }
+
 /*-- END SASS output (from sass/custom-compiled.scss) --*/
-/*-- END --*/
 
 .shop .products .product .comingsoon { position: absolute; background-image: none; right: 0; left: auto; top: -15px; text-shadow: 1px 1px #000000; padding: 0 20px 0 20px; height: 40px; line-height: 40px; display: inline-block; text-align: center; z-index: 10; box-shadow: none; font-size: 1em; color: #FFF; border-bottom: 2px solid transparent; font-weight: bold; box-shadow: -4px 4px 20px black; }
 .stroke { -webkit-text-stroke: .5px black; -webkit-text-fill-color: white; }
