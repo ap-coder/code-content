@@ -236,3 +236,4 @@ span.thumb-info-inner { color:rgb(255, 255, 255, 1)!important }
 span.ct-active>span:nth-child(1){ color:rgb(255, 255, 255, 1)!important }
 .btn-modern {text-transform: uppercase; font-size: .8em; padding: 12.8px 24px; padding: 0.8rem 1.5rem!important; font-weight: 600!important; }
 .onsale {background-color: #0088CC; border-bottom-color: #006da3; }
+.post-content { word-wrap: break-word;}
