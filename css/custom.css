@@ -221,6 +221,7 @@ a.cc-card { display: block; }
 
 #footer a:not(.btn) { color: #e1e1e1; }
 /*-- END SASS output (from sass/custom-compiled.scss) --*/
+/*-- END --*/
 
 .shop .products .product .comingsoon { position: absolute; background-image: none; right: 0; left: auto; top: -15px; text-shadow: 1px 1px #000000; padding: 0 20px 0 20px; height: 40px; line-height: 40px; display: inline-block; text-align: center; z-index: 10; box-shadow: none; font-size: 1em; color: #FFF; border-bottom: 2px solid transparent; font-weight: bold; box-shadow: -4px 4px 20px black; }
 .stroke { -webkit-text-stroke: .5px black; -webkit-text-fill-color: white; }
