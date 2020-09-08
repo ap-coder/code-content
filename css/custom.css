@@ -163,7 +163,7 @@ a.cc-card { display: block; }
 
 @media (min-width: 576px) { .section-footer .owl-carousel.dots-title.dots-title-pos-2 .owl-dots { left: 195px; } }
 
-.cc-product-chiclet { font-size: 23px; background-image: none; height: 30px; line-height: 30px; padding: 1px 7.5px; display: inline-block; position: absolute; top: 0 !important; z-index: 10; -webkit-box-shadow: none; box-shadow: none; color: #ffffff; background: #000000; font-weight: bold; text-transform: uppercase; }
+.cc-product-chiclet { font-size: 23px; background-image: none; height: 30px; line-height: 30px; padding: 1px 7.5px; display: inline-block; position: absolute; top: 0; z-index: 10; -webkit-box-shadow: none; box-shadow: none; color: #ffffff; background: #000000; font-weight: bold; text-transform: uppercase; }
 
 .cc-product-chiclet.cc-eol, .cc-product-chiclet.cc-discontinued { font-style: italic !important; }
 
@@ -171,17 +171,21 @@ a.cc-card { display: block; }
 
 .cc-product-chiclet.cc-sale { background: #ee2d2b; }
 
-@media (min-width: 576px) { .cc-product-chiclet { font-size: 1rem; height: 25px; line-height: 25px; top: 25px; padding: 0 5px; } }
+@media (min-width: 576px) { .cc-product-chiclet { font-size: 1rem; height: 25px; line-height: 25px; padding: 0 5px; } }
 
-.thumb-info .thumb-info-title { background: rgba(33, 37, 41, 0.4); letter-spacing: normal; font-size: 23px; width: 100%; bottom: -4%; }
+.thumb-info { display: block; position: relative; text-decoration: none; background-color: #ffffff; overflow: visible; }
 
-@media (min-width: 576px) { .thumb-info .thumb-info-title { font-size: 17px; } }
+.thumb-info .thumb-info-wrapper { border-radius: 0; overflow: initial !important; display: block; position: relative; }
 
-@media (min-width: 768px) { .thumb-info .thumb-info-title { font-size: 23px; } }
+.thumb-info .thumb-info-title { background: rgba(33, 37, 41, 0.4); letter-spacing: normal; font-size: 27px; max-width: 100%; width: 100%; overflow: visible; bottom: -4%; }
 
-@media (min-width: 992px) { .thumb-info .thumb-info-title { font-size: 14px; } }
+@media (min-width: 576px) { .thumb-info .thumb-info-title { font-size: 18px; } }
 
-@media (min-width: 1200px) { .thumb-info .thumb-info-title { font-size: 18px; } }
+@media (min-width: 768px) { .thumb-info .thumb-info-title { font-size: 26px; } }
+
+@media (min-width: 992px) { .thumb-info .thumb-info-title { font-size: 16px; } }
+
+@media (min-width: 1200px) { .thumb-info .thumb-info-title { font-size: 20px; } }
 
 .thumb-info .thumb-info-type { margin: 0 0 -2px -10px; width: 65%; border-radius: unset; }
 
@@ -223,17 +227,10 @@ a.cc-card { display: block; }
 
 /*-- END SASS output (from sass/custom-compiled.scss) --*/
 
-.shop .products .product .comingsoon { position: absolute; background-image: none; right: 0; left: auto; top: -15px; text-shadow: 1px 1px #000000; padding: 0 20px 0 20px; height: 40px; line-height: 40px; display: inline-block; text-align: center; z-index: 10; box-shadow: none; font-size: 1em; color: #FFF; border-bottom: 2px solid transparent; font-weight: bold; box-shadow: -4px 4px 20px black; }
 .stroke { -webkit-text-stroke: .5px black; -webkit-text-fill-color: white; }
-
 .drip-content .drip-scroll { overflow-y: scroll !important; max-height: -webkit-calc(80vh - 139px) !important; max-height: calc(80vh - 139px) !important; }
 html .progress-bar-primary { background-color: #ae1f25; }
-
-.thumb-info {display: block; position: relative; text-decoration: none; max-width: 100%; background-color: #FFF; border-radius: 4px; overflow: visible; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: translate3d(0, 0, 0); }
-.thumb-info .thumb-info-wrapper {-webkit-backface-visibility: hidden; backface-visibility: hidden; transform: translate3d(0, 0, 0); border-radius: 4px; margin: 0; overflow: initial!important; display: block; position: relative; }
 p .alternative-font { letter-spacing:normal; }
-span.thumb-info-inner { color:rgb(255, 255, 255, 1)!important }
 span.ct-active>span:nth-child(1){ color:rgb(255, 255, 255, 1)!important }
 .btn-modern {text-transform: uppercase; font-size: .8em; padding: 12.8px 24px; padding: 0.8rem 1.5rem!important; font-weight: 600!important; }
-.onsale {background-color: #0088CC; border-bottom-color: #006da3; }
 .post-content { word-wrap: break-word;}

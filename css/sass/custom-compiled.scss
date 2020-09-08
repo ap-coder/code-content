@@ -15,7 +15,7 @@ p a {
     color: $cc-color-code-red;
 }
 p a:hover {
-    color: $cc-color-cinnabar-red; //brighter red to indicate hover state
+    color: $cc-color-cinnabar-red;
 }
 a[href="#"] {
     cursor: default;
@@ -345,7 +345,7 @@ a.cc-card {
     }
 }
 
-//--PRODUCT CHICLETS AND LABELS--//
+// PRODUCT CHICLETS AND LABELS //
 .cc-product-chiclet {
     font-size: 23px;
     background-image: none; 
@@ -354,7 +354,7 @@ a.cc-card {
     padding: 1px 7.5px;
     display: inline-block;
     position: absolute;
-    top: 0 !important;
+    top: 0;
     z-index: 10;
     box-shadow: none;
     color: $cc-color-pure-white;
@@ -377,29 +377,56 @@ a.cc-card {
         font-size: 1rem;
         height: 25px;
         line-height: 25px;
-        top: 25px;
         padding: 0 5px;
     }
 }
 .thumb-info {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    background-color: $cc-color-pure-white;
+    overflow: visible;
+    .thumb-info-wrapper {
+        border-radius: 0;
+        overflow: initial !important;
+        display: block;
+        position: relative;
+    }
     .thumb-info-title {
         background: rgba(33, 37, 41, 0.4);
         letter-spacing: normal;
-        font-size: 23px;
+        font-size: 27px;
+        max-width: 100%;
         width: 100%;
+        overflow: visible;
         bottom: -4%;
         @media (min-width: 576px) {
-            font-size: 17px;
-        }
-        @media (min-width: 768px) {
-            font-size: 23px;
-        }
-        @media (min-width: 992px) {
-            font-size: 14px;
-        }
-        @media (min-width: 1200px) {
             font-size: 18px;
         }
+        @media (min-width: 768px) {
+            font-size: 26px;
+        }
+        @media (min-width: 992px) {
+            font-size: 16px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 20px;
+        }
+        //font sizes to show more letters in the title
+        
+        //font-size: 23px;
+        //@media (min-width: 576px) {
+            //font-size: 17px;
+        //}
+        //@media (min-width: 768px) {
+            //font-size: 23px;
+        //}
+        //@media (min-width: 992px) {
+            //font-size: 14px;
+        //}
+        //@media (min-width: 1200px) {
+            //font-size: 18px;
+        //}
     }
     .thumb-info-type {
         margin: 0 0 -2px -10px;
@@ -421,7 +448,7 @@ a.cc-card {
         text-align: left;
     }
 }
-//--END PRODUCT CHICLETS AND LABELS--//
+// END PRODUCT CHICLETS AND LABELS //
 
 .cc-row-code-alliance-partners {
     img {
@@ -435,7 +462,7 @@ a.cc-card {
     }
 }
 
-//--BLOG AND NEWS POST IMAGES--//
+// BLOG AND NEWS POST IMAGES //
 .image-style-side {
     width: 65%;
     margin: 7px 16%;
@@ -469,9 +496,9 @@ a.cc-card {
         width: unset;
     }
 }
-//--END BLOG AND NEWS POST IMAGES--//
+// END BLOG AND NEWS POST IMAGES //
 
-//--FOOTER--//
+// FOOTER //
 #footer {
     .footer-ribbon {
         span {
@@ -485,5 +512,5 @@ a.cc-card {
         color: $cc-color-font-reverse-link;
     }
 }
-//--END FOOTER--//
+// END FOOTER //
 /*-- END SASS output (from sass/custom-compiled.scss) --*/
