@@ -234,3 +234,10 @@ p .alternative-font { letter-spacing:normal; }
 span.ct-active>span:nth-child(1){ color:rgb(255, 255, 255, 1)!important }
 .btn-modern {text-transform: uppercase; font-size: .8em; padding: 12.8px 24px; padding: 0.8rem 1.5rem!important; font-weight: 600!important; }
 .post-content { word-wrap: break-word;}
+.full-width  {width: 100vw!important; position: relative!important; left: 50%!important; right: 50%!important; margin-left: -50vw!important; margin-right: -50vw!important; }
+form label.required:after {content: "*"; font-size: 1.3rem!important; margin: 0.3em; position: relative; top: -2px; color:darkred!important; }
+
+.btn-outline.btn-danger {color:  #AD1F25!important; background-color: transparent; background-image: none; border-color:  #AD1F25!important; border-width:3px;}
+.btn-outline.btn-danger:hover, .btn-outline.btn-danger.hover {color: #FFF!important; background-color: #AD1F25!important; border-color: #AD1F25!important; }
+textarea.form-control.form-control-lg {background-color: #E8E8E8!important; }
+textarea, select, input {border-style: solid!important; border-color: #9C9A9A!important; }
