@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Playfair Display", serif;
 }
 
-a, p, span, button, input, textarea {
+body {
 	font-family: "Sintony", sans-serif;
 }
 
@@ -87,6 +87,76 @@ h2 {
 
 .custom-color-red {
 	color: #fa4141;
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-prev,
+.custom-nav-arrows-1 .owl-nav .owl-next {
+	width: 45px !important;
+	height: 120px !important;
+	background: rgba(16, 16, 25, 0.5);
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-prev:hover,
+.custom-nav-arrows-1 .owl-nav .owl-next:hover {
+	background: #101019;
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-prev:before,
+.custom-nav-arrows-1 .owl-nav .owl-next:before {
+	content: '' !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 70% !important;
+	width: 30px;
+	height: 30px;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-prev:after,
+.custom-nav-arrows-1 .owl-nav .owl-next:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 106%;
+	top: 50%;
+	width: 70px;
+	border-top: 1px solid #FFF;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-next {
+	left: 0 !important;
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-prev {
+	right: 0 !important;
+}
+
+@media (max-width: 767px) {
+	.custom-nav-arrows-1 .owl-nav .owl-prev,
+		.custom-nav-arrows-1 .owl-nav .owl-next {
+		width: 30px;
+		height: 90px;
+	}
+
+	.custom-nav-arrows-1 .owl-nav .owl-prev:before,
+		.custom-nav-arrows-1 .owl-nav .owl-next:before {
+		width: 20px;
+		height: 20px;
+	}
+
+	.custom-nav-arrows-1 .owl-nav .owl-prev:after,
+		.custom-nav-arrows-1 .owl-nav .owl-next:after {
+		width: 50px;
+	}
+}
+
+.custom-nav-arrows-1 .owl-nav .owl-next {
+	backface-visibility: hidden;
+	transform: rotate(180deg) !important;
+	transform-origin: 50% 28%;
 }
 
 .tp-leftarrow.custom-arrows-style-1, .tp-rightarrow.custom-arrows-style-1 {
@@ -254,6 +324,7 @@ h2 {
 		display: none;
 	}
 }
+
 /* 
 * Header
 */
@@ -459,6 +530,7 @@ html.sticky-header-active #header.header-effect-shrink .header-body {
 		padding-left: 115px;
 	}
 }
+
 /*
 * Our Strategy
 */
@@ -744,6 +816,7 @@ html.sticky-header-active #header.header-effect-shrink .header-body {
 		box-shadow: none;
 	}
 }
+
 /*
 * Testimonials
 */

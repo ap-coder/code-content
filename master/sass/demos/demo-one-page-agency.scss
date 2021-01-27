@@ -15,7 +15,7 @@ $primary-font: 'Poppins', sans-serif;
 /*
 * Demo General Styles
 */
-h1, h2, h3, h4, h5, h6, p, a, span, input, strong, label {
+body {
 	font-family: $primary-font;
 }
 
@@ -197,7 +197,7 @@ html {
 /*
 * Social Icons
 */
-.social-icons {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2) {
 	&.custom-social-icons-style-1 {
 		li {
 			margin: 0;
@@ -242,16 +242,19 @@ html {
 				&.social-icons-facebook {
 					a {
 						color: #3b5a9a !important;
+						background: transparent !important;
 					}
 				}
 				&.social-icons-twitter {
 					a {
 						color: #1aa9e1 !important;
+						background: transparent !important;
 					}
 				}
 				&.social-icons-linkedin {
 					a {
 						color: #0073b2 !important;
+						background: transparent !important;
 					}
 				}
 			}

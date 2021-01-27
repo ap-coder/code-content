@@ -2,7 +2,7 @@
 /*
 Name: 			Contact Form - Google Recaptcha v3
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 namespace PortoContactForm;

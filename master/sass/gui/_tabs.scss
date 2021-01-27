@@ -22,7 +22,10 @@
 
 		.nav-link {
 			border-radius: corner-values(5px 5px 0 0);
-			font-size: 14px;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: -0.2px;
+			padding: .7rem 1.5rem;
 		    transition: all .2s;
 
 			margin-#{$right}: 1px;
@@ -106,7 +109,7 @@
 
 			.nav-link {
 				border-radius: corner-values(0 0 5px 5px);
-				font-size: 14px;
+				font-size: 13px;
 				margin-#{$right}: 1px;
 
 				&,
@@ -493,6 +496,16 @@
 		padding: 0;
 		margin: 0;
 		box-shadow: none;
+	}
+
+	/* Simple Full Width Line */
+	&.tabs-simple-full-width-line {
+		.nav-tabs {
+			border-bottom: 3px solid #eee;
+			> li {
+				margin-bottom: -3px;
+			}
+		}
 	}
 }
 

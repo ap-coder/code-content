@@ -15,6 +15,11 @@
 	}
 }
 
+// Custom Skew
+.custom-skew-1 {
+	transform: skewX(-35deg);
+}
+
 // Logo
 @media (min-width: 992px) {
 	#header.header-narrow {
@@ -136,11 +141,11 @@ html.sticky-header-active {
 
 		&:not(.sticky-header-active) #header.header-semi-transparent-light .header-nav-main nav > ul > li:not(.active) {
 			> a {
-				color: #5e7279;
+				color: #222529;
 
 				&.dropdown-toggle {
 					&:after {
-						border-color: #5e7279 transparent transparent transparent;
+						border-color: #222529 transparent transparent transparent;
 					}
 				}
 			}
@@ -189,6 +194,12 @@ html.sticky-header-active {
 	}
 }
 
+// Heading
+h2 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
 // Social Icons
 .social-icons {
 	li {
@@ -203,6 +214,22 @@ html.sticky-header-active {
 .feature-box.custom-feature-box {
 	.feature-box-icon {
 		top: 20px;
+	}
+}
+
+// Carousel
+.owl-carousel {
+	&.custom-nav-with-transparency {
+		&.nav-dark:not(.nav-style-1):not(.nav-style-2):not(.nav-style-3):not(.show-nav-title):not(.nav-arrows-1) {
+			.owl-nav {
+				button[class*="owl-"] {
+					background-color: rgba(#262a2f, 0.5) !important;
+					&:hover {
+						background-color: rgba(#262a2f, 1) !important;
+					}
+				}
+			}
+		}
 	}
 }
 

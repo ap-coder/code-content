@@ -1,7 +1,7 @@
 /*
 Name: 			it-services
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -39,14 +39,9 @@ Theme Version:	8.0.0
 
 				// Infinite Scroll
 				if(self.$btn.hasClass('btn-portfolio-infinite-scroll')) {
-					self.$btn.appear(function() {
-						self.$btn.trigger('click');
-					}, {
-						data: undefined,
-						one: false,
-						accX: 0,
-						accY: 0
-					});
+					theme.fn.intObs( '#portfolioLoadMore', "$('#portfolioLoadMore').trigger('click');", {
+						rootMargin: '0px 0px 0px 0px'
+					} );
 				}
 
 			}
@@ -120,7 +115,6 @@ Theme Version:	8.0.0
 			onclick: false,
 			onfocusout: false,
 			errorPlacement: function(error, element) {
-				console.log(element);
 				if (element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
 					error.appendTo(element.closest('.form-group'));
 				} else {

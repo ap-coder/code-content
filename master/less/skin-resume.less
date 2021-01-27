@@ -1,6 +1,7 @@
 @import "variables";
 
 @color-primary: #FDD55C;
+@color-primary-inverse: #1e1e1e;
 
 @color-secondary: #ecf1f7;
 
@@ -13,114 +14,10 @@
 @import "skin";
 
 /*
-* Menu
+* Text Color
 */
-#header {
-	&.header-floating-icons {
-		.header-nav-main {
-			nav {
-				> ul {
-					> li {
-						> a {
-							&:after {
-							    background: @color-primary;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+.custom-text-color-3 {
+	color: darken(@color-primary, 49%) !important;
 }
 
-/*
-* Owl Carousel
-*/
-.owl-carousel {
-	&.custom-dots-style-1 {
-		.owl-dots {
-			button.owl-dot {
-				&.active, &:hover {
-					span {
-						border-color: @color-primary;
-
-						&:before {
-						    color: @color-primary;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-/*
-* Timeline
-*/
-section.custom-timeline {
-    .timeline-box {
-    	&.right {
-    		&:before {
-			    box-shadow: 0 0 0 3px @color-secondary, 0 0 0 6px @color-dark !important;
-    		}
-
-    		&:after {
-    			background: @color-primary;
-    		}
-    	}
-    }
-}
-
-/*
-* Portfolio
-*/
-.custom-nav-sort {
-	&.nav {
-		> li {
-			&.active, &:hover {
-				> a {
-					background: @color-primary;
-					border-color: @color-primary;
-				}
-			}
-		}
-	}
-}
-
-.custom-thumb-info-1 {
-	.thumb-info-wrapper {
-		&:after {
-		    background: @color-primary;
-		}
-	}
-}
-
-/*
-* Testimonial
-*/
-.custom-testimonial-style-1 {
-	.testimonial-author {
-		&:before {
-			border-color: fade(contrast(@color-primary, #777, #FFF), 30%);
-		}
-	}
-}
-
-/*
-* Say Hello
-*/
-.custom-feature-box {
-	&:hover {
-		.custom-feature-box-icon {
-			background: @color-primary;
-		}
-	}
-}
-
-.custom-form-style {
-	.form-control-custom {
-		.form-control {
-			border-color: fade(contrast(@color-primary, #777, #FFF), 30%);
-		}
-	}
-}
+@import "skin-resume-common";

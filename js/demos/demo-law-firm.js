@@ -1,7 +1,7 @@
 /*
 Name: 			Law Firm
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -14,7 +14,8 @@ Theme Version:	8.0.0
 		sliderLayout: 'fullwidth',
 		delay: 9000,
 		gridwidth: 1170,
-		gridheight: 650,
+		gridheight: [650,650,650,900],
+		responsiveLevels: [4096,1200,992,500],
 		spinner: 'spinner3',
 		disableProgressBar: 'on',
 		parallax: {

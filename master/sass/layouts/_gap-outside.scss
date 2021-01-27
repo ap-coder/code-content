@@ -44,10 +44,17 @@ html.gap-outside {
 	}
 
 	// Sticky Wrapper
+	.sticky-wrapper {
+		left: 25px !important;
+	    width: calc(100vw - 67px) !important;
+	}
 	.pin-wrapper {
 		.sticky-wrapper {
 			left: 25px !important;
 			width: calc(100vw - 67px) !important;
+			.sticky-body {
+				width: calc(100vw - 67px) !important;
+			}
 		}
 
 		.sticky-wrapper.sticky-effect-active {

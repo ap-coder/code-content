@@ -71,14 +71,29 @@ body {
 	.header-top {
 		height: 60px;
 	}
+}
 
-	.header-logo {
-		width: 100px;
-		height: 48px;
-		.img-logo {
-			top: 0px;
-			width: 100%;
-			height: auto;
+/*
+* Carousel Slider Navigation
+*/
+[data-carousel-navigate] {
+	p {
+		line-height: 26px !important;
+	}
+
+	cursor: pointer;
+
+	&.active {
+		@media (min-width: 992px) {
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				height: 3px;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -148,31 +163,6 @@ body {
 */
 .custom-line-height {
 	line-height: 0.8rem !important;
-}
-
-/*
-* Slider
-*/
-.custom-select-slide {
-	p {
-		line-height: 26px !important;
-	}
-
-	cursor: pointer;
-
-	&.active {
-		@media (min-width: 992px) {
-			&:before {
-				content: "";
-				position: absolute;
-				display: block;
-				top: 0;
-				left: 0;
-				height: 3px;
-				width: 100%;
-			}
-		}
-	}
 }
 
 /*

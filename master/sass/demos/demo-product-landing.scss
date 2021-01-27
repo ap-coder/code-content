@@ -1,8 +1,15 @@
 //COMMON IMPORTS
 @import "../config/imports";
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Oswald", sans-serif;
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+// Grid Container
+@media(min-width: 1200px) {
+	.container:not(.container-lg-custom):not(.container-xl-custom) {
+		max-width: 1200px;
+	}
 }
 
 .custom-absolute-y-center {
@@ -17,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-border-color-2 {
 	border-color: #44494e !important;
+}
+
+.custom-border-color-3 {
+	border-color: #f4f4f4 !important;
 }
 
 .custom-filter-grayscale-1 {
@@ -35,33 +46,54 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+// Background Color
+.custom-bg-color-grey-1 {
+	background-color: #eff1f3 !important;
+}
+
+// Font Size
+.custom-font-size-1 {
+	font-size: 0.55em;
+}
+
+.custom-font-size-2 {
+	font-size: 0.35em;
+}
+
+// Letter Spacing
+.custom-letter-spacing-1 {
+	letter-spacing: 5px;
+}
+
+.custom-letter-spacing-2 {
+	letter-spacing: 3px;
+}
+
+// Spacement
+@media(max-width: 575px) {
+	.custom-xs-margin-top-1 {
+		margin-top: -80px;
+	}
+}
+
+@media(min-width: 1200px) {
+	.custom-xl-margin-top-1 {
+		margin-top: -70px;
+	}
+}
+
 /* Header */
 #header {
+	top: 0;
 	.header-nav-main {
 		nav {
 			> ul {
 				> li {
 					> a {
-						font-family: "Oswald", sans-serif;
-						font-weight: 400;
+						font-weight: 600;
 						font-size: 0.85rem;
-						letter-spacing: 0.5px;
-					}
-				}
-			}
-		}
-	}
-
-	.header-nav-main-arrows {
-		nav {
-			> ul {
-				> li {
-					> a {
-						&.dropdown-toggle {
-							&:after {
-								margin-top: 3px;
-							}
-						}
+						letter-spacing: 0;
+						text-transform: none;
 					}
 				}
 			}
@@ -71,7 +103,6 @@ h1, h2, h3, h4, h5, h6 {
 	.list {
 		> li {
 			> a {
-				font-family: "Oswald", sans-serif;
 				font-weight: 400;
 				font-size: 0.85rem;
 				letter-spacing: 0.5px;
@@ -79,19 +110,68 @@ h1, h2, h3, h4, h5, h6 {
 			}
 		}
 	}
+
+	.header-nav {
+		&.header-nav-line {
+			.header-nav-main {
+				nav {
+					> ul {
+						> li {
+							&:hover,
+							&.active {
+								&.no-line-effect {
+									> a {
+										&:before {
+											content: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-@media(min-width: 992px) {
+@media(min-width: 992px) and (max-width: 1199px) {
 	#header {
 		.header-nav-main {
 			nav {
 				> ul {
 					> li {
 						> a {
-							padding: 0 1.2rem !important;
+							padding: 0 1rem !important;
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+@media(min-width: 1200px) {
+	#header {
+		.header-nav-main {
+			nav {
+				> ul {
+					> li {
+						> a {
+							padding: 0 1.1rem !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+html:not(.sticky-header-active) {
+	#header {
+		.header-body {
+			&.header-border-bottom {
+				border-bottom: 0;
 			}
 		}
 	}
@@ -107,10 +187,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Custom Product Image Styles */
 @media(min-width: 1200px) {
 	.custom-product-image-style-1 {
-		position: absolute;
-		bottom: -37px;
-		#{$left}: 0;
-		max-width: calc(100% + 140px);
+	    position: absolute;
+	    top: 81%;
+	    #{$left}: 130px;
+	    transform: translate3d(0, -50%, 0);
+	    img {
+	    	max-width: calc(100% + 740px);
+	    }
+	}
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+	.custom-product-image-style-1 {
+	    img {
+		    margin-left: 140px;
+		    max-width: 170%;
+	    }
 	}
 }
 
@@ -183,15 +275,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Custom Play Button */
 .custom-play-button-1 {
 	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 100px;
-	height: 100px;
-	border-radius: 100%;
-	background: #FFF;
-	color: #212529;
-	transition: ease transform 300ms;
-	font-size: 1.6rem;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: #FFF;
+    color: #212529;
+    transition: ease transform 300ms;
+    font-size: 1.3rem;
 	&:hover {
 		transform: scale(1.1);
 	}	
@@ -211,16 +303,11 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-/* Rating Size */
-.rating-container {
-	font-size: 12px !important;
-}
-
 /* Custom SVG Line Animation */
 @keyframes customSVGLineAnim {
 	from {
 		@include if-ltr() {
-			stroke-dasharray: 310;
+			stroke-dasharray: 380;
 			stroke-dashoffset: 170;
 		}
 		@include if-rtl() {
@@ -236,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		@include if-rtl() {
 			stroke-dasharray: 500;
-			stroke-dashoffset: 350;
+			stroke-dashoffset: 230;
 		}
 	}
 }
@@ -259,4 +346,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .customSVGLineAnimTwo {
 	animation-name: customSVGLineAnimTwo;
+}
+
+/* 360º Product Viewer */
+.cd-product-viewer-handle {
+	.handle {
+		border: none;
+	}
+	.fill {
+		background-color: #e8e9e9;
+	}
 }

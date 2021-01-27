@@ -49,3 +49,9 @@
 		border-width: unquote($i + 'px') !important;
 	}
 }
+
+@media(max-width: 767px) {
+	.border-sm-none {
+		border: 0 !important;
+	}
+}

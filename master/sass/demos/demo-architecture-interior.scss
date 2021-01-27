@@ -1,7 +1,7 @@
 //COMMON IMPORTS
 @import "../config/imports";
 
-a, span, p, b, strong, li, h1, h2, h3, h4, h5, h6 {
+body {
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -214,5 +214,14 @@ a, span, p, b, strong, li, h1, h2, h3, h4, h5, h6 {
 .inner-page {
 	.main {
 		padding-top: 100px;
+	}
+}
+
+// Scrollable Plugin
+#header {
+	&.side-header-hide {
+		[data-plugin-scrollable] {
+			display: none;
+		}
 	}
 }

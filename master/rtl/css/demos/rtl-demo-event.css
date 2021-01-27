@@ -183,6 +183,7 @@ i.custom-long-arrow-right:after {
 		height: 100vh !important;
 	}
 }
+
 /*
 * Speakers
 */
@@ -421,6 +422,7 @@ i.custom-long-arrow-right:after {
 		display: none;
 	}
 }
+
 /*
 * Schedule
 */
@@ -622,6 +624,7 @@ i.custom-long-arrow-right:after {
 		margin-right: 0;
 	}
 }
+
 /*
 * Counter
 */
@@ -634,6 +637,7 @@ i.custom-long-arrow-right:after {
 		margin: 55px 0 !important;
 	}
 }
+
 /*
 * Sponsors
 */
@@ -755,6 +759,7 @@ i.custom-long-arrow-right:after {
 		margin-top: -50px;
 	}
 }
+
 /*
 * Footer
 */
@@ -799,7 +804,7 @@ i.custom-long-arrow-right:after {
 	}
 
 	#footer .container .row > .col-md-5,
-	#footer .container .row > .col-md-3:nth-of-type(2) {
+		#footer .container .row > .col-md-3:nth-of-type(2) {
 		margin-bottom: 100px;
 	}
 }

@@ -147,7 +147,8 @@ html .btn {
 	border: 1px solid #FFF;
 }
 
-.owl-carousel .owl-dots button.owl-dot.active span, .owl-carousel .owl-dots button.owl-dot:hover span {
+.owl-carousel .owl-dots button.owl-dot.active span,
+.owl-carousel .owl-dots button.owl-dot:hover span {
 	background: #FFF !important;
 }
 

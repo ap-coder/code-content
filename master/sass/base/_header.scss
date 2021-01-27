@@ -185,6 +185,19 @@
 				}
 			}
 		}
+
+		&.header-top-bottom-containered-border {
+			border-bottom: 0;
+			> .container {
+				> .header-row {
+				    border-bottom: 1px solid rgba(0,0,0,.06);
+				}
+			}
+		}
+
+		&.header-top-small-minheight {
+			min-height: 38px;
+		}
 	}
 
 	// Logo
@@ -196,6 +209,8 @@
 			transition: all 0.3s ease;
 			position: relative;
 			top: 0;
+			image-rendering: -webkit-optimize-contrast;
+			transform: translateZ(0);
 		}
 	}
 
@@ -217,6 +232,7 @@
 					font-size: 0.9em;
 					padding: 6px 10px;
 					display: inline-block;
+					letter-spacing: -0.5px;
 					[class*="fa-"], .icons {
 						margin-#{$right}: 3px;
 						font-size: 0.8em;
@@ -229,7 +245,8 @@
 						background: transparent;
 					}
 				}
-				&.open {
+				&.open,
+				&.accessibility-open {
 					> .dropdown-menu-toggle {
 						border-radius: 4px 4px 0 0;
 					}
@@ -250,8 +267,29 @@
 						#{$left}: 0;
 					}
 				}
+				& + .nav-item-right-border {
+					margin-#{$right}: 10px;
+					padding-#{$right}: 10px;
+					position: relative;
+					&:before {
+						background: rgba(0,0,0,0.08);
+						content: "";
+						width: 1px;
+						height: 16px;
+						position: absolute;
+						display: block;
+						top: 50%;
+						transform: translate3d(0, -50%, 0);
+						#{$right}: 0;
+					}
+				}
 				&.nav-item-left-border.nav-item-left-border-remove {
 					&:after {
+						content: none;
+					}
+				}
+				&.nav-item-left-border.nav-item-right-border-remove {
+					&:before {
 						content: none;
 					}
 				}
@@ -266,6 +304,10 @@
 						margin-#{$left}: 0;
 						padding-#{$left}: 0;
 					}
+					&.nav-item-right-border-remove.d-none {
+						margin-#{$left}: 0;
+						padding-#{$left}: 0;
+					}
 				}
 				
 				// Show nav item left border with responsive levels
@@ -274,6 +316,11 @@
 						$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
 					    &.nav-item-left-border.nav-item-left-border#{$infix}-show {
+							&:after {
+								content: '';
+							}
+						}
+						&.nav-item-right-border.nav-item-right-border#{$infix}-show {
 							&:after {
 								content: '';
 							}
@@ -601,6 +648,9 @@
 						}
 						.qty-price {
 							font-size: 0.8em;
+							.price {
+								display: inline-block;
+							}
 						}
 						.btn-remove {
 							z-index: 3;
@@ -671,8 +721,8 @@
 		.header-nav-features-user {
 			.header-nav-features-toggle {
 				color: #444;
-				font-size: 12px;
-				font-weight: 700;
+				font-size: 13px;
+				font-weight: 600;
 				text-transform: uppercase;
 				.far {
 					font-size: 0.95rem;
@@ -796,7 +846,16 @@
 			z-index: 1;
 			.big-search-header {
 				align-items: center;
+				input[type="search"] {
+					&::-webkit-search-decoration,
+					&::-webkit-search-cancel-button,
+					&::-webkit-search-results-button,
+					&::-webkit-search-results-decoration {
+						-webkit-appearance: none;
+					}
+				}
 			}
+
 			.form-control {
 				border: 0;
 				background: transparent;
@@ -1556,6 +1615,7 @@ html.sticky-header-enabled {
 							    transform: translate3d(0, -50%, 0);
 							}
 							&.open > .dropdown-menu,
+							&.accessibility-open > .dropdown-menu,
 							&:hover > .dropdown-menu {
 								top: 3px;
 								#{$left}: 100%;
@@ -1567,7 +1627,7 @@ html.sticky-header-enabled {
 								margin-top: -5px;
 								border-top: 0;
 							}
-							&.open, &:hover {
+							&.open, &.accessibility-open, &:hover {
 								> a {
 									padding-bottom: 0.5rem;
 									&:before {
@@ -1632,6 +1692,7 @@ html.sticky-header-enabled {
 									}
 								}
 								&.open > .dropdown-menu,
+								&.accessibility-open > .dropdown-menu,
 								&:hover > .dropdown-menu {
 								    display: flex;
 								    justify-content: center;
@@ -1654,6 +1715,7 @@ html.sticky-header-enabled {
 							nav > ul > {
 								li.dropdown {
 									&.open > .dropdown-menu,
+									&.accessibility-open > .dropdown-menu,
 									&:hover > .dropdown-menu {
 									    height: 100vh;
 									}
@@ -1800,6 +1862,7 @@ html.sticky-header-enabled {
 					nav > ul > {
 						li.dropdown {
 							&.open > .dropdown-menu,
+							&.accessibility-open > .dropdown-menu,
 							&:hover > .dropdown-menu {
 								// bottom: 0;
 								top: auto;
@@ -2112,7 +2175,7 @@ html {
 							&:after {
 								top: -2px !important;
 							}
-							&.open, &:focus, &:active, &.active {
+							&.open, &.accessibility-open, &:focus, &:active, &.active {
 								background: transparent;
 							}
 						}
@@ -2162,6 +2225,7 @@ html {
 								}
 							}
 							&.open,
+							&.accessibility-open,
 							.dropdown-submenu.open {
 								> .dropdown-menu {
 									display: block !important;

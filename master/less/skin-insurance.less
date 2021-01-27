@@ -10,12 +10,13 @@
 
 @import "skin";
 
-// Custom Bullets Styles
-.custom-bullets-style-1 {
-	.tp-bullet {
-		&:hover,
-		&.selected {
-			background: @color-secondary;
+// Carousel Slider Dots
+.custom-dots-style-1 {
+	.owl-dots {
+		.owl-dot {
+		    &.active {
+		    	background: @color-secondary !important;
+		    }
 		}
 	}
 }

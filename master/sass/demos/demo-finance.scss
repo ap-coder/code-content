@@ -52,7 +52,7 @@ $font-primary: 'Poppins', sans-serif;
 }
 
 // CONFIG DEMO TEXT ELEMENTS
-h1, h2, h3, h4, h5, h6, a, p, span, li, input {
+body {
 	font-family: $font-primary;
 }
 
@@ -394,7 +394,7 @@ h4 {
 		    margin-right: 5px;
 
 		    a {
-		    	border-radius: 50%;
+		    	border-radius: 0;
 		    	line-height: 30px;
 		    	color: #93949a !important;
 		    }
@@ -410,13 +410,13 @@ h4 {
 	&.custom-style-1 {
 		li {
 			background: none;
-			box-shadow: none;
+			box-shadow: none !important;
 			margin-bottom: 0;
 			line-height: 1;
 
 			&:hover {
 				a {
-					background: none;
+					background: none !important;
 				}
 
 				&.social-icons-facebook {

@@ -61,7 +61,7 @@
 /*
 * General
 */
-h1, h2, h3, h4, h5, h6, a, p, span, li {
+body {
 	font-family: "Montserrat", sans-serif;
 }
 
@@ -277,6 +277,7 @@ html.sticky-header-active #header .header-body {
 		border-bottom: 0;
 	}
 }
+
 /*
 * Form
 */
@@ -490,7 +491,7 @@ ul.custom-comments-style .comment-block {
 /*
 * Footer
 */
-#footer p, #footer a, #footer li, #footer span {
+#footer p, #footer a:not(.btn):not(.no-footer-css), #footer li, #footer span {
 	color: #8d9097;
 	font-size: 14px;
 }

@@ -163,6 +163,7 @@
     width: 57px;
     height: 57px;
     border-radius: 100%;
+    text-indent: -9999px;
 	&:before {
 		content: '';
 		position: absolute;
@@ -412,31 +413,6 @@ html.boxed {
 	.slider-container {
 		width: 100% !important;
 		left: auto !important;
-	}
-}
-
-/* Home Slider - Nivo Slider */
-.nivo-slider {
-	position: relative;
-	.theme-default {
-		.nivoSlider {
-			border-radius: corner-values(.3rem .3rem 0 0);
-			box-shadow: none;
-			margin-top: 10px;
-			img {
-				border-radius: corner-values(.3rem .3rem 0 0);
-			}
-		}
-		.nivo-controlNav {
-			margin-top: -72px;
-			position: absolute;
-			z-index: 99;
-			#{$right}: 5px;
-			bottom: -17px;
-		}
-		.nivo-caption {
-			padding-#{$left}: 20px;
-		}
 	}
 }
 

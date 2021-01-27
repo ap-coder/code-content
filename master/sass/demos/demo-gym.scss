@@ -4,7 +4,7 @@
 $primary-font: 'Poppins', sans-serif;
 
 // Set Demo Font Family
-h1, h2, h3, h4, h5, h6, a, p, span {
+body {
 	font-family: $primary-font;
 }
 
@@ -260,7 +260,6 @@ h4 {
 
 // Header
 #header .header-nav-main.header-nav-main-slide nav > ul > li > span > a {
-    font-family: $primary-font;
     text-transform: none;
     font-weight: 500;
     font-size: 14px;
@@ -751,7 +750,7 @@ h4 {
 	}
 }
 
-.custom-social-icons {
+.social-icons.custom-social-icons {
 	li {
 		box-shadow: none !important;
 

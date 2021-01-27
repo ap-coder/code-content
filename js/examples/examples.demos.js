@@ -1,7 +1,7 @@
 /*
 Name: 			Demos - Examples
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -101,11 +101,6 @@ Theme Version:	8.0.0
 				$(window).trigger('resize');
 			}, 1000);
 		}
-	});
-
-	// Lazy Load
-	$.extend(theme.PluginLazyLoad.defaults, {
-		container: $('.main')
 	});
 
 }).apply( this, [ jQuery ]);

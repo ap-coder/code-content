@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Playfair Display", serif;
 }
 
-a, p, span, input {
+body {
 	font-family: "Sintony", sans-serif;
 }
 
@@ -448,6 +448,36 @@ p {
 	color: #8C8C8C !important;
 }
 
+.custom-carousel-arrows-style-1 .owl-nav .owl-next,
+.custom-carousel-arrows-style-1 .owl-nav .owl-prev {
+	width: 45px !important;
+	height: 80px !important;
+	background: rgba(16, 16, 25, 0.5);
+}
+
+.custom-carousel-arrows-style-1 .owl-nav .owl-next:hover,
+.custom-carousel-arrows-style-1 .owl-nav .owl-prev:hover {
+	background: #101019;
+}
+
+.custom-carousel-arrows-style-1 .owl-nav .owl-next:before,
+.custom-carousel-arrows-style-1 .owl-nav .owl-prev:before {
+	content: '' !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 70% !important;
+	width: 30px;
+	height: 30px;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+
+.custom-carousel-arrows-style-1 .owl-nav .owl-next {
+	transform: rotate(180deg) !important;
+	transform-origin: 50% 25%;
+}
+
 .tp-leftarrow.custom-arrows-style-1, .tp-rightarrow.custom-arrows-style-1 {
 	width: 45px;
 	height: 80px;
@@ -695,6 +725,7 @@ p {
 		margin-top: 240px;
 	}
 }
+
 /*
 * About Us
 */

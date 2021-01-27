@@ -133,16 +133,29 @@ ul.custom-comments-style {
 	}
 }
 
-// Custom Bullets Styles
-.custom-bullets-style-1 {
-	.tp-bullet {
-		background: $color-light;
-		width: 10px;
-		height: 10px;
-		border-color: $color-light;
-		&:hover,
-		&.selected {
-			background: #CCC;
+// Carousel Slider Dots
+.custom-dots-style-1 {
+	.owl-dots {
+		.owl-dot {
+			background: #FFF;
+		    border-radius: 100%;
+		    width: 16px;
+		    height: 16px;
+		    display: inline-flex;
+		    align-items: center;
+		    justify-content: center;
+		    border: 3px solid #FFF;
+		    > span {
+		    	background: transparent !important;
+		    }
+
+		    &.active {
+		    	background: #CCC !important;
+		    }
+
+		    & + .owl-dot {
+		    	margin-left: 6px !important;
+		    }
 		}
 	}
 }
@@ -263,28 +276,30 @@ ul.custom-comments-style {
 
 // Custom Select
 .custom-select-1 {
-	position: relative;
-	&:before {
-		content: '\f107';
-		font-family: "Font Awesome 5 Free";
-		position: absolute;
-		display: block;
-		color: #000 !important;
-		top: 19px;
-		#{$right}: 20px;
-	    color: #b5b5b5;
-	    font-weight: bold;
-	    pointer-events: none;
-	}
-	select {
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
-	    -ms-appearance: none;
-	    color: #000;
+	&.custom-select-1-icon-position {
+		position: relative;
+		&:before {
+			content: '\f107';
+			font-family: "Font Awesome 5 Free";
+			position: absolute;
+			display: block;
+			color: #000 !important;
+			top: 30px;
+			#{$right}: 20px;
+		    color: #b5b5b5;
+		    font-weight: bold;
+		    pointer-events: none;
+		}
+		select {
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    -ms-appearance: none;
+		    color: #000;
 
-	    &::-ms-expand {
-	    	display: none;
-	    }
+		    &::-ms-expand {
+		    	display: none;
+		    }
+		}
 	}
 }
 
@@ -418,7 +433,7 @@ ul.custom-comments-style {
 		    }
 			p {
 				color: #777;
-				font-family: 'Open Sans';
+				font-family: 'Poppins', Arial, sans-serif;
 				font-style: normal;
 				font-size: 14px;
 				line-height: 24px;
@@ -470,6 +485,9 @@ ul.custom-comments-style {
 		&:focus,
 		&:active {
 			color: #FFF;
+		}
+		&:not(.btn):not(.no-footer-css) {
+			color: #a8b0b3;
 		}
 	}
 

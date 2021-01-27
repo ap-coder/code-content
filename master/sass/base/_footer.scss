@@ -38,7 +38,7 @@
 	}
 
 	// Link
-	a:not(.btn) {
+	a:not(.btn):not(.no-footer-css) {
 		color: $color-font-default;
 		transition: all 0.1s ease-in-out;
 
@@ -105,6 +105,19 @@
 		}
 		&.list.icons li {
 			margin-bottom: 5px;
+		}
+	}
+
+	// Texts More Lighten
+	&.footer-texts-more-lighten {
+		p, span, a:not(.btn):not(.no-footer-css), li {
+			color: #a8a8a8;
+		}
+		a:not(.btn):not(.no-footer-css) {
+			&:hover {
+				text-decoration: none;
+				color: #FFF;
+			}
 		}
 	}
 
@@ -251,6 +264,8 @@
 		img {
 			position: relative;
 			top: 2px;
+			image-rendering: -webkit-optimize-contrast;
+			transform: translateZ(0);
 		}
 	}
 

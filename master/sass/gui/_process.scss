@@ -44,6 +44,145 @@
 			}
 		}
 	}
+
+	// Process Shapes
+	&.process-shapes {
+		.process-step-circle {
+			position: relative;
+			width: auto;
+			height: auto;
+			border: 0;
+			margin-bottom: 1.2rem;
+			.process-step-circle-content {
+				position: relative;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+				width: 45px;
+				height: 45px;
+				background-color: #CCC;
+				border-radius: 100%;
+				color: #FFF;
+				z-index: 3;
+			}
+
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				background-color: #777;
+				border-radius: 100%;
+				opacity: 0.6;
+				transform: translate3d(-50%, -50%, 0) scale(1.5);
+				transition: ease transform 1s, ;
+				z-index: 2;
+			}
+
+			&:after {
+				background-color: #999;
+				opacity: 0.3;
+				transform: translate3d(-50%, -50%, 0) scale(2);
+				z-index: 1;
+			}
+		}
+
+		// Process Shapes Hover Animate
+		&.process-shapes-hover-animate {
+			.process-step {
+				&:hover {
+					.process-step-circle {
+						&:before {
+							animation-name: processShapesScaleOne;	
+							animation-delay: 300ms;
+						}
+						&:after {
+							animation-name: processShapesScaleTwo;
+							
+						}
+						&:before, &:after {
+							animation-fill-mode: forwards;
+						    animation-iteration-count: infinite;
+						    animation-duration: 3s;
+						    animation-timing-function: linear;
+						}
+					}
+				}
+			}
+		}
+
+		// Process Shapes Hover Animate
+		&.process-shapes-always-animate {
+			.process-step {
+				.process-step-circle {
+					&:before {
+						animation-name: processShapesScaleOne;	
+						animation-delay: 300ms;
+					}
+					&:after {
+						animation-name: processShapesScaleTwo;
+						
+					}
+					&:before, &:after {
+						animation-fill-mode: forwards;
+					    animation-iteration-count: infinite;
+					    animation-duration: 3s;
+					    animation-timing-function: linear;
+					}
+					&.process-shapes-always-animate-delay {
+						&:before {
+							animation-name: processShapesScaleOne;	
+							animation-delay: 1000ms;
+						}
+						&:after {
+							animation-name: processShapesScaleTwo;
+							animation-delay: 700ms;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes processShapesScaleOne {
+	0% {
+		opacity: 0.6;
+		transform: translate3d(-50%, -50%, 0) scale(1.5);
+	}
+	25% {
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(1.8);
+	}
+	50% {
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(1);
+	}
+	100% {
+		opacity: 0.6;
+		transform: translate3d(-50%, -50%, 0) scale(1.5);
+	}
+}
+
+@keyframes processShapesScaleTwo {
+	0% {
+		opacity: 0.3;
+		transform: translate3d(-50%, -50%, 0) scale(2);
+	}
+	25% {
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(2.3);
+	}
+	50% {
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(1);
+	}
+	100% {
+		opacity: 0.3;
+		transform: translate3d(-50%, -50%, 0) scale(2);
+	}
 }
 
 @media (min-width: 992px) {
@@ -62,6 +201,15 @@
 			&:last-child {
 				&:before {
 					display: none;
+				}
+			}
+		}
+
+		// Process Shapes
+		&.process-shapes {
+			.process-step {
+				&:before {
+					top: 23px;
 				}
 			}
 		}

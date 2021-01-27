@@ -1,4 +1,4 @@
-.body {
+body {
 	font-family: "Poppins", sans-serif;
 }
 
@@ -10,6 +10,7 @@
 		max-width: 1240px !important;
 	}
 }
+
 /*
 * BG
 */
@@ -60,6 +61,7 @@
 		max-width: 100%;
 	}
 }
+
 /*
 * Letter Spacing
 */
@@ -445,6 +447,10 @@ html[dir="rtl"] .slider-container .line-pre-title {
 
 .custom-social-icons li:hover a {
 	color: #333 !important;
+}
+
+.custom-social-icons li:hover a > i[class*="text-color-"] {
+	color: #FFF !important;
 }
 
 /*

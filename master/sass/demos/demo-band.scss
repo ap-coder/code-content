@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, span, a {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-p, li, input, textarea {
+body {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -75,11 +75,8 @@ p, li, input, textarea {
 	    stroke-dashoffset: 630;
 		transition: ease stroke-dashoffset 5s, ease fill-opacity 1s 1.7s;
 	}
-}
 
-/* Rev Slider - Custom Porto SVG Logo */
-.active-revslide {
-	.custom-porto-svg-logo {
+	&.active {
 		path {
 			stroke-dashoffset: 0;
 			fill-opacity: 1;
@@ -211,7 +208,7 @@ p, li, input, textarea {
 			    line-height: 1.8;
 				padding: 1px 10px;
 				text-transform: uppercase;
-				font-family: "Open Sans", sans-serif;
+				font-family: "Poppins", Arial, sans-serif;
 
 			}
 			.day {
@@ -222,7 +219,7 @@ p, li, input, textarea {
 				font-size: 18px;
 				font-weight: 900;
 				padding: 10px;
-				font-family: "Open Sans", sans-serif;
+				font-family: "Poppins", Arial, sans-serif;
 			}
 		}
 	}

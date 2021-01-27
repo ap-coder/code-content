@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, a, p, span {
+body {
 	font-family: "Poppins", sans-serif;
 }
 
@@ -241,7 +241,6 @@ h4 {
 }
 
 #header .header-nav-main.header-nav-main-slide nav > ul > li > span > a {
-	font-family: "Poppins", sans-serif;
 	text-transform: none;
 	font-weight: 500;
 	font-size: 14px;
@@ -662,17 +661,17 @@ h4 {
 	margin-bottom: 0;
 }
 
-.custom-social-icons li {
+.social-icons.custom-social-icons li {
 	box-shadow: none !important;
 }
 
-.custom-social-icons li a {
+.social-icons.custom-social-icons li a {
 	background: transparent !important;
 	font-size: 17px;
 	color: #FFF !important;
 }
 
-.custom-social-icons li:hover a {
+.social-icons.custom-social-icons li:hover a {
 	background: transparent !important;
 	opacity: 0.7;
 }

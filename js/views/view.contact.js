@@ -1,7 +1,7 @@
 /*
 Name: 			View - Contact
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function($) {
@@ -35,6 +35,19 @@ Theme Version:	8.0.0
 	*/
 	$('.contact-form').each(function(){
 		$(this).validate({
+			errorPlacement: function(error, element) {
+				if(element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+					error.appendTo(element.closest('.form-group'));
+				} else if( element.is('select') && element.closest('.custom-select-1') ) {
+					error.appendTo(element.closest('.form-group'));
+				} else {
+					if( element.closest('.form-group').length ) {
+						error.appendTo(element.closest('.form-group'));
+					} else {
+						error.insertAfter(element);
+					}
+				}
+			},
 			submitHandler: function(form) {
 
 				var $form = $(form),
@@ -142,7 +155,9 @@ Theme Version:	8.0.0
 			}
 		},
 		errorPlacement: function(error, element) {
-			if (element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+			if(element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+				error.appendTo(element.closest('.form-group'));
+			} else if( element.is('select') && element.closest('.custom-select-1') ) {
 				error.appendTo(element.closest('.form-group'));
 			} else {
 				error.insertAfter(element);
@@ -155,6 +170,15 @@ Theme Version:	8.0.0
 	*/
 	$('.contact-form-recaptcha-v3').each(function(){
 		$(this).validate({
+			errorPlacement: function(error, element) {
+				if(element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+					error.appendTo(element.closest('.form-group'));
+				} else if( element.is('select') && element.closest('.custom-select-1') ) {
+					error.appendTo(element.closest('.form-group'));
+				} else {
+					error.insertAfter(element);
+				}
+			},
 			submitHandler: function(form) {
 
 				var $form = $(form),

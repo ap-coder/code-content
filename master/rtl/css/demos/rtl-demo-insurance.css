@@ -111,15 +111,27 @@ ul.custom-comments-style .comment-block {
 	padding: 5px 0 20px;
 }
 
-.custom-bullets-style-1 .tp-bullet {
+.custom-dots-style-1 .owl-dots .owl-dot {
 	background: #FFF;
-	width: 10px;
-	height: 10px;
-	border-color: #FFF;
+	border-radius: 100%;
+	width: 16px;
+	height: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid #FFF;
 }
 
-.custom-bullets-style-1 .tp-bullet:hover, .custom-bullets-style-1 .tp-bullet.selected {
-	background: #CCC;
+.custom-dots-style-1 .owl-dots .owl-dot > span {
+	background: transparent !important;
+}
+
+.custom-dots-style-1 .owl-dots .owl-dot.active {
+	background: #CCC !important;
+}
+
+.custom-dots-style-1 .owl-dots .owl-dot + .owl-dot {
+	margin-left: 6px !important;
 }
 
 .custom-thumb-style-1 {
@@ -220,7 +232,7 @@ ul.custom-comments-style .comment-block {
 
 @media (max-width: 767px) {
 	.custom-left-rounded-form-control,
-	.custom-right-rounded-form-control {
+		.custom-right-rounded-form-control {
 		border-radius: 50px !important;
 	}
 
@@ -229,31 +241,31 @@ ul.custom-comments-style .comment-block {
 	}
 }
 
-.custom-select-1 {
+.custom-select-1.custom-select-1-icon-position {
 	position: relative;
 }
 
-.custom-select-1:before {
+.custom-select-1.custom-select-1-icon-position:before {
 	content: '\f107';
 	font-family: "Font Awesome 5 Free";
 	position: absolute;
 	display: block;
 	color: #000 !important;
-	top: 19px;
+	top: 30px;
 	left: 20px;
 	color: #b5b5b5;
 	font-weight: bold;
 	pointer-events: none;
 }
 
-.custom-select-1 select {
+.custom-select-1.custom-select-1-icon-position select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
 	color: #000;
 }
 
-.custom-select-1 select::-ms-expand {
+.custom-select-1.custom-select-1-icon-position select::-ms-expand {
 	display: none;
 }
 
@@ -366,7 +378,7 @@ ul.custom-comments-style .comment-block {
 
 .testimonial.custom-testimonial-style-1 blockquote p {
 	color: #777;
-	font-family: 'Open Sans';
+	font-family: 'Poppins', Arial, sans-serif;
 	font-style: normal;
 	font-size: 14px;
 	line-height: 24px;
@@ -409,6 +421,10 @@ ul.custom-comments-style .comment-block {
 
 #footer a:hover, #footer a:focus, #footer a:active {
 	color: #FFF;
+}
+
+#footer a:not(.btn):not(.no-footer-css) {
+	color: #a8b0b3;
 }
 
 #footer .list li {

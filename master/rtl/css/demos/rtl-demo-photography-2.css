@@ -46,17 +46,17 @@
 }
 
 .alternative-font {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	font-size: inherit;
 }
 
 .default-font {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	font-size: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 }
 
 h1 {
@@ -309,7 +309,7 @@ html.sticky-header-active #header .header-body {
 }
 
 #main {
-	min-height: calc( 100vh - 167px );
+	min-height: calc( 100vh - 167px);
 }
 
 .slider-container {
@@ -335,7 +335,7 @@ html.sticky-header-active #header .header-body {
 
 .tp-caption-photo-label {
 	color: #fff;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	font-size: 1.8em;
 	font-weight: 300;
 	letter-spacing: -1px;
@@ -1169,7 +1169,7 @@ html.sticky-header-active #header .header-body {
 #horizontalScrollBox {
 	position: relative;
 	width: 100%;
-	height: calc( 100vh - 183px );
+	height: calc( 100vh - 183px);
 	overflow-y: hidden;
 	overflow-x: scroll;
 }
@@ -1223,7 +1223,7 @@ html.sticky-header-active #header .header-body {
 
 #horizontalScrollBox .content .horizontal-scroll-item-wrapper .horizontal-scroll-item .thumb-info .thumb-info-wrapper img {
 	width: auto;
-	height: calc( 100vh - 223px );
+	height: calc( 100vh - 223px);
 }
 
 #horizontalScrollBox .content .horizontal-scroll-item-wrapper .horizontal-scroll-item .thumb-info .thumb-info-wrapper .thumb-info-plus {
@@ -1746,7 +1746,7 @@ section.photographers .owl-carousel .owl-nav {
 }
 
 .custom-thumb-info-photographers .social-icons li a {
-	background: transparent;
+	background: transparent !important;
 	width: 40px;
 	height: 40px;
 	border-color: #fff;
@@ -1959,7 +1959,7 @@ section.our-blog {
 }
 
 .our-blog-item.blog-post .post-infos .testimonial blockquote p {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	color: #777;
 	font-style: normal;
 	line-height: 1.5;
@@ -2246,7 +2246,7 @@ section.contact-details .feature-box p, section.contact-details .feature-box a {
 
 #footer.light.narrow .footer-copyright p {
 	color: #777;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	font-size: 13px;
 }
 
@@ -2264,7 +2264,7 @@ section.contact-details .feature-box p, section.contact-details .feature-box a {
 }
 
 html.photography-demo-2 h1, html.photography-demo-2 h2, html.photography-demo-2 h3, html.photography-demo-2 h4, html.photography-demo-2 h5, html.photography-demo-2 h6, html.photography-demo-2 a, html.photography-demo-2 p, html.photography-demo-2 span {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 }
 
 html.photography-demo-2.sticky-header-enabled #header .header-body {
@@ -2328,7 +2328,7 @@ html.photography-demo-2 #header .header-social-icons li a {
 	width: 24px;
 	height: 24px;
 	border: none;
-	background: transparent;
+	background: transparent !important;
 	color: #FFF !important;
 }
 
@@ -2639,7 +2639,7 @@ html.photography-demo-2 #porfolioDetailsAjaxBox .rev_slider {
 }
 
 html.photography-demo-2 #horizontalScrollBox {
-	height: calc( 100vh - 174px );
+	height: calc( 100vh - 174px);
 }
 
 @media (min-width: 992px) {

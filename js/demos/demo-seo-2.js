@@ -1,7 +1,7 @@
 /*
 Name: 			SEO 2
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -18,7 +18,6 @@ Theme Version:	8.0.0
 			onclick: false,
 			onfocusout: false,
 			errorPlacement: function(error, element) {
-				console.log(element);
 				if (element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
 					error.appendTo(element.closest('.form-group'));
 				} else {

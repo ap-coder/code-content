@@ -2,7 +2,7 @@
 @import "../config/imports";
 
 //CONFIG
-$font-secondary: "Open Sans", Arial, sans-serif;
+$font-secondary: "Poppins", Arial, sans-serif;
 
 $custom-font-size-1: 2em;
 $custom-font-size-2: 3.5em;
@@ -116,7 +116,7 @@ html.photography-demo-2 {
 					width: 24px;
 					height: 24px;
 					border: none;
-					background: transparent;
+					background: transparent !important;
 					color: #FFF !important;
 				}
 			}

@@ -1,79 +1,12 @@
 /*
 Name: 			Construction 2
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function ($) {
 
 	'use strict';
-
-	var sliderOptions = {
-		sliderType: 'standard',
-		sliderLayout: 'auto',
-		delay: 5000,
-		responsiveLevels: [4096, 1200, 992, 500],
-		gridwidth: [1440, 970, 750],
-		gridheight: 650,
-		lazyType: "none",
-		shadow: 0,
-		spinner: "off",
-		shuffle: "off",
-		autoHeight: "off",
-		fullScreenAlignForce: "off",
-		fullScreenOffset: "",
-		disableProgressBar: "on",
-		hideThumbsOnMobile: "off",
-		hideSliderAtLimit: 0,
-		hideCaptionAtLimit: 0,
-		hideAllCaptionAtLilmit: 0,
-		debugMode: false,
-		fallbacks: {
-			simplifyAll: "off",
-			nextSlideOnWindowFocus: "off",
-			disableFocusListener: false,
-		},
-		navigation: {
-			keyboardNavigation: "off",
-			keyboard_direction: "horizontal",
-			mouseScrollNavigation: "off",
-			onHoverStop: "off",
-			touch: {
-				touchenabled: "off",
-			},
-			arrows: {
-				enable: false,
-			}
-		},
-	}
-
-	// Slider Init
-	var revapi = $(document).ready(function() {
-		$('#revolutionSlider').revolution(sliderOptions);
-	});
-
-    revapi.on('revolution.slide.onchange', function(event, data) {
-    	$('.custom-select-slide').removeClass('active');
- 		$('#slide-' + data.slideIndex).addClass('active');
-    });
-
-	var setSlide = function(n){
-		$('.custom-select-slide').removeClass('active');
-		$('#revolutionSlider').revshowslide(n);
-		$('#slide-' + n).addClass('active');
-	};
-
-	$('#slide-1').on('click', function(){
-		setSlide(1);
-	});
-
-	$('#slide-2').on('click', function(){
-		setSlide(2);
-	});
-
-	$('#slide-3').on('click', function(){
-		setSlide(3);
-	});
 
 	// Load More - Projects
 	var loadMore = {
@@ -107,14 +40,9 @@ Theme Version:	8.0.0
 
 				// Lazy Load
 				if(self.$btn.hasClass('btn-lazy-load')) {
-					self.$btn.appear(function() {
-						self.$btn.trigger('click');
-					}, {
-						data: undefined,
-						one: false,
-						accX: 0,
-						accY: 0
-					});
+					theme.fn.intObs( '#loadMore', "$('#loadMore').trigger('click');", {
+						rootMargin: '0px 0px 0px 0px'
+					} );
 				}
 
 			}
@@ -161,10 +89,6 @@ Theme Version:	8.0.0
 
 	if($('#loadMoreWrapper').get(0)) {
 		loadMore.build();
-	}
-
-	if ($('#portfolioLoadMoreWrapper').get(0)) {
-		portfolioLoadMore.build();
 	}
 
 	// Thumb Gallery

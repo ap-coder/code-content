@@ -132,9 +132,11 @@ section {
 			}
 			.section-angled-layer-increase-angle-2 {
 				&.section-angled-layer-top {
+					padding: 5rem 0;
 			        transform: skewY(-4.7deg) translate3d(0, -50%, 0);
 				}
 				&.section-angled-layer-bottom {
+					padding: 5rem 0;
 					transform: skewY(4.7deg) translate3d(0, 50%, 0);
 				}
 			}
@@ -157,9 +159,11 @@ section {
 				}
 				.section-angled-layer-increase-angle-2 {
 					&.section-angled-layer-top {
+						padding: 5rem 0;
 				        transform: skewY(4.7deg) translate3d(0, -50%, 0);
 					}
 					&.section-angled-layer-bottom {
+						padding: 5rem 0;
 						transform: skewY(-4.7deg) translate3d(0, 50%, 0);
 					}
 				}
@@ -382,6 +386,200 @@ section {
 			section.section {
 				margin-bottom: 30px;
 				margin-top: 0;
+			}
+		}
+	}
+}
+
+/* Section With Shape Divider */
+@keyframes shapeDividerToLeft {
+	from {
+	    transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		transform: translate3d(-200%, 0, 0);
+	}
+}
+
+@keyframes shapeDividerToRight {
+	from {
+	    transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		transform: translate3d(200%, 0, 0);
+	}
+}
+
+.section {
+	&.section-with-shape-divider {
+		position: relative;
+		overflow: hidden;
+		.shape-divider {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 80px;
+			z-index: 1;
+
+			svg {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				height: 100%;
+				transform: translate3d(-50%, 0, 0);
+			}
+
+			@media(min-width: 1950px) {
+				svg {
+					width: 100%;
+				}
+			}
+
+			&.shape-divider-bottom {
+				top: auto;
+				bottom: 0;
+			}
+			&.shape-divider-reverse-y {
+			    transform: rotateY(180deg);
+			}
+			&.shape-divider-reverse-x {
+			    transform: rotateX(180deg);
+			}
+			&.shape-divider-reverse-xy {
+				transform: rotateY(180deg) rotateX(180deg);
+			}
+
+			// Horizontal Animation
+			.shape-divider-horizontal-animation {
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100vw;
+			    height: 100%;
+				animation-duration: 45s;
+				animation-iteration-count: infinite;
+			    animation-timing-function: linear;
+
+			    > svg {
+			    	width: 100vw;
+			    	left: 0;
+			    	transform: none;
+			    }
+
+				&.shape-divider-horizontal-animation-to-right {
+					&.start {
+						animation-name: shapeDividerToRight;
+					}
+
+					> svg:nth-child(2) {
+						transform: rotateY(180deg) translate3d(99.9%, 0, 0);
+						@media(max-width: 575px) {
+							transform: rotateY(180deg) translate3d(99.8%, 0, 0);
+						}
+					}
+					> svg:nth-child(3) {
+						transform: translate3d(-199.8%, 0, 0);
+						@media(max-width: 575px) {
+							transform: translate3d(-199.6%, 0, 0);
+						}
+					}
+				}
+
+				&.shape-divider-horizontal-animation-to-left {
+					&.start {
+						animation-name: shapeDividerToLeft;
+					}
+
+					> svg:nth-child(2) {
+						transform: rotateY(180deg) translate3d(-99.9%, 0, 0);
+						@media(max-width: 575px) {
+							transform: rotateY(180deg) translate3d(99.8%, 0, 0);
+						}
+					}
+					> svg:nth-child(3) {
+						transform: translate3d(199.8%, 0, 0);
+						@media(max-width: 575px) {
+							transform: translate3d(199.6%, 0, 0);
+						}
+					}
+				}
+			}
+			&.shape-divider-reverse-y,
+			&.shape-divider-reverse-xy {
+				.shape-divider-horizontal-animation {
+					&.shape-divider-horizontal-animation-to-right {
+						&.start {
+							animation-name: shapeDividerToLeft;
+						}
+						> svg:nth-child(2) {
+							transform: rotateY(180deg) translate3d(-99.9%, 0, 0);
+							@media(max-width: 575px) {
+								transform: rotateY(180deg) translate3d(-99.8%, 0, 0);
+							}
+						}
+						> svg:nth-child(3) {
+							transform: translate3d(199.8%, 0, 0);
+							@media(max-width: 575px) {
+								transform: translate3d(199.6%, 0, 0);
+							}
+						}
+					}
+					&.shape-divider-horizontal-animation-to-left {
+						&.start {
+							animation-name: shapeDividerToRight;
+						}
+						> svg:nth-child(2) {
+							transform: rotateY(180deg) translate3d(99.9%, 0, 0);
+							@media(max-width: 575px) {
+								transform: rotateY(180deg) translate3d(99.8%, 0, 0);
+							}
+						}
+						> svg:nth-child(3) {
+							transform: translate3d(-199.8%, 0, 0);
+							@media(max-width: 575px) {
+								transform: translate3d(-199.6%, 0, 0);
+							}
+						}
+					}
+				}
+			}
+			&.shape-divider-reverse-x {
+				.shape-divider-horizontal-animation {
+					&.shape-divider-horizontal-animation-to-right {
+						&.start {
+							animation-name: shapeDividerToRight;
+						}
+					}
+					&.shape-divider-horizontal-animation-to-left {
+						&.start {
+							animation-name: shapeDividerToLeft;
+						}
+
+						> svg:nth-child(2) {
+							transform: rotateY(180deg) translate3d(-99.9%, 0, 0);
+							@media(max-width: 575px) {
+								transform: rotateY(180deg) translate3d(-99.8%, 0, 0);
+							}
+						}
+						> svg:nth-child(3) {
+							transform: translate3d(199.8%, 0, 0);
+							@media(max-width: 575px) {
+								transform: translate3d(199.6%, 0, 0);
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
+		// If has overlay
+		&.overlay {
+			&:before {
+				z-index: 1;
 			}
 		}
 	}

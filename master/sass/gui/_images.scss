@@ -255,3 +255,17 @@ ul.thumbnail-gallery {
 .lazy-bg {
 	background-image: url(img/lazy.png);
 }
+
+/* Thumb Gallery */
+.thumb-gallery-wrapper {
+	.thumb-gallery-thumbs {
+		.owl-item {
+			border: 2px solid #f7f7f7;
+			transition: ease all 300ms;
+			&:hover,
+			&.selected {
+			    border: 2px solid #212121;
+			}
+		}
+	}
+}

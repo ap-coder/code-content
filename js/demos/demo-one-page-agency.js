@@ -1,7 +1,7 @@
 /*
 Name: 			One Page Agency
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -9,67 +9,6 @@ Theme Version:	8.0.0
 	'use strict';
 
 	var $window = $(window);
-
-	/*
-	* Slider Options
-	*/
-	var sliderOptions = {
-		sliderType: 'standard',
-		sliderLayout: 'fullscreen',
-		delay: 5000,
-		responsiveLevels: [1920, 1200, 992, 500],
-		gridwidth: [1170, 970, 750],
-		gridheight: 700,
-		autoHeight: "on",
-		spinner: "off",
-		fullScreenAlignForce: "off",
-		fullScreenOffset: "",
-		disableProgressBar: "on",
-		navigation: {
-			keyboardNavigation: "on",
-			keyboard_direction: "horizontal",
-			mouseScrollNavigation: "off",
-			onHoverStop: "off",
-			touch: {
-				touchenabled: "on",
-				swipe_threshold: 75,
-				swipe_min_touches: 1,
-				swipe_direction: "horizontal",
-				drag_block_vertical: false
-			},
-			arrows: {
-				enable: true,
-				style: "custom-rev-arrows-style-1",
-				left : {
-			        container:"slider",
-			        h_align:"left",
-		            v_align:"center",
-		            h_offset:0,
-		            v_offset:0,
-			    },
-			    right : {
-		            container:"slider",
-		            v_align:"center",
-		            h_align:"right",
-		            h_offset:0,
-		            v_offset:0
-			    }
-			}
-		},
-		parallax:{
-			type:"on",
-			levels:[20,40,60,80,100],
-			origo:"enterpoint",
-			speed:400,
-			bgparallax:"on",
-			disable_onmobile:"off"
-		}
-	}
-		
-	/*
-	* Slider Init
-	*/
-	$('#revolutionSlider').revolution(sliderOptions);
 
 	/*
 	* Collapse Menu Button
@@ -127,14 +66,9 @@ Theme Version:	8.0.0
 
 				// Lazy Load
 				if(self.$btn.hasClass('btn-lazy-load')) {
-					self.$btn.appear(function() {
-						self.$btn.trigger('click');
-					}, {
-						data: undefined,
-						one: false,
-						accX: 0,
-						accY: 0
-					});
+					theme.fn.intObs( '#loadMore', "$('#loadMore').trigger('click');", {
+						rootMargin: '0px 0px 0px 0px'
+					} );
 				}
 
 			}

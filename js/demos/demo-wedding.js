@@ -1,7 +1,7 @@
 /*
 Name: 			Wedding
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -15,7 +15,8 @@ Theme Version:	8.0.0
 		sliderType: 'standard',
 		sliderLayout: 'fullwidth',
 		delay: 9000,
-		gridwidth: 1170,
+		responsiveLevels: [1920, 1200, 992, 500],
+		gridwidth: [1170,970,750,500],
 		gridheight: 810,
 		disableProgressBar: 'on',
 		spinner: 'spinner3',
@@ -97,14 +98,9 @@ Theme Version:	8.0.0
 
 				// Lazy Load
 				if(self.$btn.hasClass('btn-history-lazy-load')) {
-					self.$btn.appear(function() {
-						self.$btn.trigger('click');
-					}, {
-						data: undefined,
-						one: false,
-						accX: 0,
-						accY: 0
-					});
+					theme.fn.intObs( '#historyLoadMore', "$('#historyLoadMore').trigger('click');", {
+						rootMargin: '0px 0px 0px 0px'
+					} );
 				}
 
 				zoomHistoryGallery(self.$wrapper);
@@ -223,14 +219,9 @@ Theme Version:	8.0.0
 
 				// Lazy Load
 				if(self.$btn.hasClass('btn-blog-lazy-load')) {
-					self.$btn.appear(function() {
-						self.$btn.trigger('click');
-					}, {
-						data: undefined,
-						one: false,
-						accX: 0,
-						accY: 0
-					});
+					theme.fn.intObs( '#blogLoadMore', "$('#blogLoadMore').trigger('click');", {
+						rootMargin: '0px 0px 0px 0px'
+					} );
 				}
 
 			}

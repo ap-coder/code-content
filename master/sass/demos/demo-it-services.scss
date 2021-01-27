@@ -9,8 +9,11 @@ $font-secondary: "Lora", sans-serif;
 	font-family: $font-secondary !important;
 }
 
-.body {
+body {
 	font-family: $font-primary;
+}
+
+.body {
 	margin: 0;
 
 	@media (min-width: 1440px) {
@@ -20,7 +23,7 @@ $font-secondary: "Lora", sans-serif;
 
 // Laptop Screens
 @media (min-width: 1440px) and (max-width: 1600px) {
-	.container-lg {
+	.container-lg-custom {
 		padding: 0 80px;
 	}
 }
@@ -637,7 +640,7 @@ $font-secondary: "Lora", sans-serif;
 * Footer
 */
 #footer {
-	p, li, span, a:not(.btn), .footer-copyright p {
+	p, li, span, a:not(.btn):not(.no-footer-css), .footer-copyright p {
 		color: #a3b6e7;
 		font-weight: 500;
 	}

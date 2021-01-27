@@ -272,7 +272,7 @@
 }
 
 .thumb-bride-groom .social-icons li:hover a {
-	background: none;
+	background: none !important;
 	color: #ef3447 !important;
 }
 
@@ -324,7 +324,7 @@
 
 .testimonials .testimonial blockquote p {
 	font-style: normal;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	line-height: 1.6;
 }
 
@@ -512,7 +512,7 @@
 }
 
 .guestbook-messages .testimonial p {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	line-height: 1.7;
 	font-style: normal;
 	text-align: right;

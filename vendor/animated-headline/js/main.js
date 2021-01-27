@@ -21,29 +21,31 @@ jQuery(document).ready(function($) {
 	initHeadline();
 
 	function initHeadline() {
-		//insert <i> element for each letter of a changing word
-		singleLetters($('.word-rotator.letters').find('b'));
 		//initialise headline animation
-		animateHeadline($('.word-rotator'));
+		animateHeadline('.word-rotator', '.word-rotator.letters');
 	}
 
-	function singleLetters($words) {
-		$words.each(function() {
-			var word = $(this),
-				letters = word.text().split(''),
-				selected = word.hasClass('is-visible');
-			for (i in letters) {
-				if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
-				letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
-			}
-			var newLetters = letters.join('');
-			word.html(newLetters).css('opacity', 1);
-		});
-	}
-
-	function animateHeadline($headlines) {
+	function animateHeadline($selector) {
 		var duration = animationDelay;
-		$headlines.each(function() {
+
+		theme.fn.intObs($selector, function(){
+			
+			// Single Letters - Insert <i> element for each letter of a changing word
+			if( $(this).hasClass('letters') ) {
+				$(this).find('b').each(function() {
+					var word = $(this),
+						letters = word.text().split(''),
+						selected = word.hasClass('is-visible');
+					for (i in letters) {
+						if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
+						letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
+					}
+					var newLetters = letters.join('');
+					word.html(newLetters).css('opacity', 1);
+				});				
+			}
+
+			// Animate the Headline
 			var headline = $(this);
 
 			if (headline.hasClass('loading-bar')) {
@@ -66,11 +68,11 @@ jQuery(document).ready(function($) {
 				headline.find('.word-rotator-words').css('width', width);
 			};
 
-			//trigger animation
+			// Trigger animation
 			setTimeout(function() {
 				hideWord(headline.find('.is-visible').eq(0))
 			}, duration);
-		});
+		}, {});
 	}
 
 	function hideWord($word) {
@@ -122,7 +124,6 @@ jQuery(document).ready(function($) {
 		if ($word.parents('.word-rotator').hasClass('type')) {
 			showLetter($word.find('i').eq(0), $word, false, $duration);
 			$word.addClass('is-visible').removeClass('is-hidden');
-
 		} else if ($word.parents('.word-rotator').hasClass('clip')) {
 			if (document.hasFocus()) {
 				$word.parents('.word-rotator-words').stop( true, true ).animate({
@@ -133,8 +134,12 @@ jQuery(document).ready(function($) {
 					}, revealAnimationDelay);
 				});
 			} else {
-				$word.parents('.word-rotator-words').stop( true, true ).css('width', $word.outerWidth() + 10);
-				hideWord($word);
+				$word.parents('.word-rotator-words').stop( true, true ).animate({
+					width: $word.outerWidth() + 10
+				});
+				setTimeout(function() {
+					hideWord($word)
+				}, revealAnimationDelay);
 			}
 		}
 	}

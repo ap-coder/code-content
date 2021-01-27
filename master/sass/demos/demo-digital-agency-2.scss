@@ -8,9 +8,11 @@ $color-black: #000;
 $font-secondary: "Poppins", sans-serif;
 $font-tertiary: "Lora", serif;
 
-.body {
+body {
 	font-family: $font-secondary;
+}
 
+.body {
 	@media (min-height: 1200px) {
 		overflow-x: hidden;
 	}
@@ -254,24 +256,7 @@ html.mobile-menu-opened.sticky-header-active {
 /*
 * Slider
 */
-.slider-container {
-	&:after {
-		content: '';
-		display: block;
-		width: 120%;
-		height: 100px;
-		background-color: #fff;
-		position: absolute;
-		bottom: -48px;
-		left: -5%;
-		transform: rotate(2deg);
-		z-index: 100;
-
-		@media (max-width: 1199px) {
-			display: none;
-		}
-	}
-
+.custom-circles-container {
 	.custom-circle-1:nth-child(1) {
 		top: 40%;
 		left: 5%;

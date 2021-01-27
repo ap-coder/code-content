@@ -15,6 +15,7 @@ $color-dark: #1e1e1e;
 body {
 	position: relative;
 	overflow-x: hidden;
+	font-family: "Poppins", sans-serif;
 }
 
 .body {
@@ -66,10 +67,6 @@ section.section {
 
 .custom-text-color-2 {
 	color: #727c93 !important;
-}
-
-.custom-text-color-3 {
-	color: #4a3b00 !important;
 }
 
 // PARALLAX OVERFLOW
@@ -138,6 +135,7 @@ section.section {
 }
 
 .custom-btn-style-2 {
+	color: $color-dark !important;
 	padding: 10px 30px;
 	border-radius: 35px !important;
 
@@ -248,6 +246,23 @@ section.section {
 
 				span {
 					border: 2px solid $color-dark !important;
+				}
+			}
+		}
+
+		&.custom-dots-color-1-light {
+			.owl-dots {
+				button.owl-dot {
+					&.active, &:hover {
+						span {
+							border-color: $color-light !important;
+							background-color: $color-light !important;
+						}
+					}
+
+					span {
+						border: 2px solid $color-light !important;
+					}
 				}
 			}
 		}
@@ -458,7 +473,7 @@ section.section {
 							margin: 0;
 							padding: 15px;
 							color: #1e1e1e !important;
-						    border-bottom-color: #FDD55C;
+						    border-bottom: none;
 
 							> span {
 								display: none;
@@ -554,7 +569,7 @@ section.section {
 	i {
 		float: $left;
 		font-size: 1.3em;
-		margin-#{$right}: 5px;
+		margin-#{$right}: 10px;
 		vertical-align: middle;
 	}
 }
@@ -720,7 +735,7 @@ section.custom-timeline {
 
 		.experience-info {
 			p {
-				opacity: 0.5;
+				opacity: 0.8;
 				text-transform: uppercase;
 				font-size: 11px;
 			}
@@ -744,7 +759,7 @@ section.custom-timeline {
 
 				> span {
 					display: block;
-					opacity: 0.5;
+					opacity: 0.8;
 					text-transform: uppercase;
 					font-size: 11px;
 				}
@@ -894,10 +909,6 @@ section.custom-timeline {
 				> a {
 					background: $color-primary;
 					border-color: $color-primary;
-
-					&:hover, &:focus {
-						color: $color-dark;   	
-					}
 				}
 			}
 		}
@@ -993,7 +1004,7 @@ section.custom-timeline {
 		background: transparent !important;
 
 		p {
-			font-family: "Open Sans";
+			font-family: "Poppins", Arial, sans-serif;
 			font-size: 1em;
 			line-height: 1.8;
 		}
@@ -1010,11 +1021,25 @@ section.custom-timeline {
 			top: -10px;
 			#{$left}: 10px;
 			width: 100px;
-			border-top: 1px solid #deb717;
+			border-top: 1px solid rgba(0, 0, 0, 0.3);
 		}
 
 		span {
 			font-size: 1em;
+		}
+	}
+
+	&.custom-testimonial-style-1-light {
+		blockquote {
+			&:before, &:after {
+				color: $color-light;
+			}
+		}
+
+		.testimonial-author {
+			&:before {
+				border-top: 1px solid rgba(255, 255, 255, 0.3);
+			}
 		}
 	}
 }
@@ -1162,9 +1187,9 @@ section.custom-timeline {
 .custom-form-style {
 	.form-control-custom {
 		.form-control {
-			background: transparent;
+			background: transparent !important;
 			border: none;
-			border-bottom: 1px solid #d8b113;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 			color: $color-dark;
 			font-size: 12px;
 			padding: 6px 0;
@@ -1197,22 +1222,31 @@ section.custom-timeline {
 			height: 100px;
 			margin-bottom: 15px;
 		}
+
+		&.form-control-custom-light {
+			.form-control {
+				color: $color-light;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+				&::-webkit-input-placeholder {
+					color: $color-light;
+				}
+				&::-moz-placeholder {
+					color: $color-light;
+				}
+				&:-ms-input-placeholder {
+					color: $color-light;
+				}
+				&:-moz-placeholder {
+					color: $color-light;
+				}
+			}
+		}
 	}
 }
 
 .custom-feature-box {
-	&:hover {
-		.custom-feature-box-icon {
-			background: $color-primary;
-
-			i {
-				color: $color-dark !important;
-			}
-		}
-	}
-
 	.custom-feature-box-icon {
-		border: 1px solid #454441;
+		border-radius: 100%;
 		line-height: 0.9;
 		padding: 10px;
 		transition: ease background 300ms;

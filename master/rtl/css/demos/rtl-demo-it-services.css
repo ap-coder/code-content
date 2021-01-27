@@ -2,8 +2,11 @@
 	font-family: "Lora", sans-serif !important;
 }
 
-.body {
+body {
 	font-family: "Poppins", sans-serif;
+}
+
+.body {
 	margin: 0;
 }
 
@@ -14,10 +17,11 @@
 }
 
 @media (min-width: 1440px) and (max-width: 1600px) {
-	.container-lg {
+	.container-lg-custom {
 		padding: 0 80px;
 	}
 }
+
 /*
 * Custom Text Size
 */
@@ -79,6 +83,7 @@
 		margin-right: -50px !important;
 	}
 }
+
 /*
 * Custom Heading Bar
 */
@@ -90,7 +95,7 @@
 	content: '';
 	position: absolute;
 	top: 50%;
-	left: calc( 100% + 15px );
+	left: calc( 100% + 15px);
 	width: 50px;
 	border-top: 5px solid #CCC;
 	transform: translate3d(0, -50%, 0);
@@ -98,7 +103,7 @@
 
 .custom-heading-bar.custom-heading-bar-right:before {
 	left: auto;
-	right: calc( 100% + 15px );
+	right: calc( 100% + 15px);
 }
 
 .custom-heading-bar.custom-heading-bar-with-padding {
@@ -207,6 +212,7 @@
 		margin-left: 12px;
 	}
 }
+
 /*
 * Home - Intro
 */
@@ -241,6 +247,7 @@
 		width: 230%;
 	}
 }
+
 /*
 * Home - Who We Are
 */
@@ -327,6 +334,7 @@
 		transform: translate3d(-20px, -20px, 0);
 	}
 }
+
 /*
 * Home - We Provide
 */
@@ -355,6 +363,7 @@
 		height: 60%;
 	}
 }
+
 /*
 * Testimonial
 */
@@ -379,7 +388,7 @@
 	content: '';
 	position: absolute;
 	top: 6px;
-	left: calc( 100% + 10px );
+	left: calc( 100% + 10px);
 	width: 30px;
 	border-top: 4px solid #000;
 }
@@ -402,7 +411,7 @@
 		content: '';
 		display: block;
 		position: absolute;
-		width: calc( 100vw - 120px );
+		width: calc( 100vw - 120px);
 		height: 2px;
 		top: 53px;
 		left: 50%;
@@ -419,7 +428,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: calc( 100% + 30px );
+		width: calc( 100% + 30px);
 		background-color: #FFF;
 		height: 100%;
 		transform: translate3d(-50%, -50%, 0);
@@ -434,6 +443,7 @@
 		margin-top: -75px;
 	}
 }
+
 /*
 * Nav
 */
@@ -467,6 +477,7 @@
 		margin-bottom: 10px;
 	}
 }
+
 /*
 * Blog
 */
@@ -529,7 +540,7 @@
 /*
 * Footer
 */
-#footer p, #footer li, #footer span, #footer a:not(.btn), #footer .footer-copyright p {
+#footer p, #footer li, #footer span, #footer a:not(.btn):not(.no-footer-css), #footer .footer-copyright p {
 	color: #a3b6e7;
 	font-weight: 500;
 }

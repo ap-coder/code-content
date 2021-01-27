@@ -6,6 +6,10 @@
 	content: "\f064";
 }
 
+.custom-skew-1 {
+	transform: skewX(-35deg);
+}
+
 @media (min-width: 992px) {
 	#header.header-narrow .header-nav.header-nav-stripe {
 		position: relative;
@@ -91,11 +95,11 @@ html.sticky-header-active #header.header-semi-transparent-light .header-body {
 	}
 
 	html:not(.sticky-header-active) #header.header-semi-transparent-light .header-nav-main nav > ul > li:not(.active) > a {
-		color: #5e7279;
+		color: #222529;
 	}
 
 	html:not(.sticky-header-active) #header.header-semi-transparent-light .header-nav-main nav > ul > li:not(.active) > a.dropdown-toggle:after {
-		border-color: #5e7279 transparent transparent transparent;
+		border-color: #222529 transparent transparent transparent;
 	}
 
 	html:not(.sticky-header-active) #header.header-semi-transparent-light .header-nav-main nav > ul > li:not(.active):hover > a {
@@ -115,6 +119,11 @@ html.sticky-header-active #header.header-semi-transparent-light .header-body {
 	}
 }
 
+h2 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
 .social-icons li {
 	box-shadow: none;
 }
@@ -125,6 +134,14 @@ html.sticky-header-active #header.header-semi-transparent-light .header-body {
 
 .feature-box.custom-feature-box .feature-box-icon {
 	top: 20px;
+}
+
+.owl-carousel.custom-nav-with-transparency.nav-dark:not(.nav-style-1):not(.nav-style-2):not(.nav-style-3):not(.show-nav-title):not(.nav-arrows-1) .owl-nav button[class*="owl-"] {
+	background-color: rgba(38, 42, 47, 0.5) !important;
+}
+
+.owl-carousel.custom-nav-with-transparency.nav-dark:not(.nav-style-1):not(.nav-style-2):not(.nav-style-3):not(.show-nav-title):not(.nav-arrows-1) .owl-nav button[class*="owl-"]:hover {
+	background-color: #262a2f !important;
 }
 
 .tp-caption-custom-stripe {

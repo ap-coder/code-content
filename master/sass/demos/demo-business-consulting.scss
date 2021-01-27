@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6  {
 	font-family: $secondary-font;
 }
 
-a, p, span, button, input, textarea {
+body {
 	font-family: $primary-font;
 }
 
@@ -102,6 +102,78 @@ h2 {
 // Custom Colors
 .custom-color-red {
 	color: #fa4141;
+}
+
+// Carousel Slider
+.custom-nav-arrows-1 {
+	.owl-nav {
+		.owl-prev,
+		.owl-next {
+			width: 45px !important;
+			height: 120px !important;
+			background: rgba(16, 16, 25, 0.5);
+			&:hover {
+				background: rgba(16, 16, 25, 1);
+			}
+			&:before {
+				content: '' !important;
+				position: absolute !important;
+				top: 50% !important;
+				left: 70% !important;
+				width: 30px;
+				height: 30px;
+				border-top: 1px solid #FFF;
+				border-left: 1px solid #FFF;
+				transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 106%;
+				top: 50%;
+				width: 70px;
+				border-top: 1px solid #FFF;
+				transform: translate3d(-50%, -50%, 0);
+			}
+		}
+		.owl-next {
+			#{$right}: 0 !important;
+		}
+		.owl-prev {
+			#{$left}: 0 !important;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.custom-nav-arrows-1 {
+		.owl-nav {
+			.owl-prev,
+			.owl-next {
+				width: 30px;
+				height: 90px;
+				&:before {
+					width: 20px;
+					height: 20px;
+				}
+				&:after {
+					width: 50px;
+				}
+			}
+		}
+	}
+}
+
+.custom-nav-arrows-1 {
+	.owl-nav {
+		.owl-next {
+			backface-visibility: hidden;
+			transform: rotate(180deg) !important;
+		    transform-origin: 50% 28%;
+		}
+	}
 }
 
 // Rev Slider - Custom Arrows Style

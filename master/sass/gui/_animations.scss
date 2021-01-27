@@ -124,6 +124,23 @@
 	animation-name: fadeInUpShorter;
 }
 
+/* Fade In Up Shorter Plus */
+@keyframes fadeInUpShorterPlus {
+	from {
+	    opacity: 0;
+	    transform: translate(0, 15px);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.fadeInUpShorterPlus {
+	animation-name: fadeInUpShorterPlus;
+}
+
 /* Fade In Left Shorter */
 @keyframes fadeInLeftShorter {
 	from {
@@ -139,6 +156,23 @@
 
 .fadeInLeftShorter {
 	animation-name: fadeInLeftShorter;
+}
+
+/* Fade In Left Shorter Plus */
+@keyframes fadeInLeftShorterPlus {
+	from {
+	    opacity: 0;
+	    transform: translate(15px, 0);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInLeftShorterPlus {
+	animation-name: fadeInLeftShorterPlus;
 }
 
 /* Fade In Right Shorter */
@@ -158,6 +192,40 @@
 	animation-name: fadeInRightShorter;
 }
 
+/* Fade In Right Shorter Plus */
+@keyframes fadeInRightShorterPlus {
+	from {
+	    opacity: 0;
+	    transform: translate(-15px, 0);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInRightShorterPlus {
+	animation-name: fadeInRightShorterPlus;
+}
+
+/* Fade In Right Shorter With Opacity */
+@keyframes fadeInRightShorterOpacity {
+	from {
+	    opacity: 0;
+	    transform: translate(-50px, 0);
+	}
+
+	to {
+	    opacity: 0.7;
+	    transform: none;
+	}
+}
+
+.fadeInRightShorterOpacity {
+	animation-name: fadeInRightShorterOpacity;
+}
+
 /* Fade In Down Shorter */
 @keyframes fadeInDownShorter {
 	from {
@@ -173,6 +241,91 @@
 
 .fadeInDownShorter {
 	animation-name: fadeInDownShorter;
+}
+
+/* Fade In Down Shorter Plus */
+@keyframes fadeInDownShorterPlus {
+	from {
+	    opacity: 0;
+	    transform: translate(0, -15px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInDownShorterPlus {
+	animation-name: fadeInDownShorterPlus;
+}
+
+/* Fade In Right and Down Shorter */
+@keyframes fadeInRightDownShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(-50px, -50px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInRightDownShorter {
+	animation-name: fadeInRightDownShorter;
+}
+
+/* Fade In Right and Up Shorter */
+@keyframes fadeInRightUpShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(-50px, 50px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInRightUpShorter {
+	animation-name: fadeInRightUpShorter;
+}
+
+/* Fade In Left and Down Shorter */
+@keyframes fadeInLeftDownShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(50px, -50px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInLeftDownShorter {
+	animation-name: fadeInLeftDownShorter;
+}
+
+/* Fade In Left and Up Shorter */
+@keyframes fadeInLeftUpShorter {
+	from {
+	    opacity: 0;
+	    transform: translate(50px, 50px);
+	}
+
+	to {
+	    opacity: 1;
+	    transform: none;
+	}
+}
+
+.fadeInLeftUpShorter {
+	animation-name: fadeInLeftUpShorter;
 }
 
 /* Expand In */
@@ -323,4 +476,122 @@
 
 .blurIn {
 	animation-name: blurIn;
+}
+
+/* Ken Burns To Right */
+@keyframes kenBurnsToRight {
+	from {
+		transform: scale(1.2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+.kenBurnsToRight {
+	animation-name: kenBurnsToRight;
+	animation-timing-function: linear;
+	transform-origin: right;
+}
+
+/* Ken Burns To Left */
+@keyframes kenBurnsToLeft {
+	from {
+		transform: scale(1.2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+.kenBurnsToLeft {
+	animation-name: kenBurnsToLeft;
+	animation-timing-function: linear;
+	transform-origin: left;
+}
+
+/* Ken Burns To Left and Top */
+.kenBurnsToLeftTop {
+	animation-name: kenBurnsToLeft;
+	animation-timing-function: linear;
+	transform-origin: left top;
+}
+
+/* Moving From Top to Bottom */
+@keyframes bgPositionBottomToTop {
+	from {
+		background-position: bottom;
+	}
+	to {
+		background-position: top;
+	}
+}
+
+.bgPositionBottomToTop {
+	animation-name: bgPositionBottomToTop;
+	animation-timing-function: linear;
+	transform-origin: right;
+}
+
+/* Pulse */
+@keyframes pulseAnim {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
+
+.pulseAnim {
+	&:not(:hover) {
+		&:after {
+			animation-name: pulseAnim;
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: inherit;
+		border-radius: inherit;
+		z-index: -1;
+	}
+
+	&.pulseAnimAnimated {
+		&:after {
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-delay: 1s; 
+		}
+	}
+
+	&:not(i) {
+		&:after {
+			z-index: 0;
+		}
+		* {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
+/* Basic Rotation */
+@keyframes basicRotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.basicRotation {
+	animation-name: basicRotation;
 }

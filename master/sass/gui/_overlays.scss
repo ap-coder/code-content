@@ -121,3 +121,22 @@
 		background-color: $color-dark !important;
 	}
 }
+
+/* Overlay Gradient */
+.overlay-gradient {
+	&:before {
+		background-color: rgba(108,110,241,1);
+		background-image: linear-gradient(to right, rgba(108,110,241,1) 0%, rgba(226,73,142,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c6ef1', endColorstr='#e2498e', GradientType=1 );
+	}
+
+	&.overlay-gradient-animated {
+		&:before {
+			background-size: 200% 200%;
+			animation-name: gradientTransition;
+			animation-duration: 20000ms;
+			animation-iteration-count: infinite;
+
+		}
+	}
+}

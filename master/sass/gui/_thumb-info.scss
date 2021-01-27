@@ -38,6 +38,17 @@
 			opacity: 0;
 			z-index: 1;
 		}
+
+		&.thumb-info-wrapper-link {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			> a {
+				display: block;
+				padding-top: 72%;
+				text-indent: -9999px;
+			}
+		}
 	}
 
 	@for $i from 0 through 9 {

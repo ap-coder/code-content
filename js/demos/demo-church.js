@@ -1,56 +1,12 @@
 /*
 Name: 			Church
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
 
 	'use strict';
-
-	/*
-	Slider
-	*/
-	if( $('#revolutionSlider').get(0) ) {
-		$('#revolutionSlider').revolution({
-			sliderType: 'standard',
-			sliderLayout: 'auto',
-			delay: 9000,
-			responsiveLevels: [4096,1200,992,420],
-			gridwidth:[1170,970,750],
-			gridheight: 600,
-			disableProgressBar: 'on',
-			spinner: 'spinner3',
-			parallax:{
-				type:"on",
-				levels:[20,40,60,80,100],
-				origo:"enterpoint",
-				speed:400,
-				bgparallax:"on",
-				disable_onmobile:"off"
-			},
-			navigation: {
-				arrows: {
-					style: "custom-arrows-style-1",
-					enable: true,
-					hide_onmobile: false,
-					hide_onleave: true,
-					left: {
-						h_align: "left",
-						v_align: "center",
-						h_offset: 0,
-						v_offset: 0
-					},
-					right: {
-						h_align: "right",
-						v_align: "center",
-						h_offset: 0,
-						v_offset: 0
-					}
-				}
-			}
-		});
-	}
 
 	/*
 	* Validate

@@ -114,7 +114,7 @@
 			#{$right}: 0;
 			top: 5%;
 			height: 90%;
-			width: 1px;
+			width: 2px;
 			display: block;
 			background-color: transparent;
 		}
@@ -151,6 +151,20 @@
 		&.in {
 			position: relative;
 			visibility: visible;
+		}
+	}
+
+	&.type-clean-light {
+		.word-rotator-words {
+			&:after {
+				width: 8px;
+			}
+			&.waiting::after {
+				animation: 500ms word-rotator-pulse-light step-end infinite;
+			}
+			&.selected {
+				background-color: transparent !important;
+			}
 		}
 	}
 

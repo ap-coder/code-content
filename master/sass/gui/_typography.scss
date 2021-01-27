@@ -105,7 +105,15 @@ p.drop-caps {
 }
 
 .alternative-font-4 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+.alternative-font-5 {
+	font-family: 'Open Sans', Arial, sans-serif !important;
+}
+
+.alternative-font-6 {
+	font-family: 'Montserrat', Arial, sans-serif !important;
 }
 
 /* Gradient Text */

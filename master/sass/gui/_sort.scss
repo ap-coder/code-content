@@ -25,6 +25,14 @@
 /* Sort Source */
 .sort-source {
 	clear: both;
+
+	&.d-none {
+		display: block !important;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
 	 > li {
 	 	> a {
 	 		padding: 6px 12px;
@@ -143,6 +151,22 @@
 		.portfolio-item {
 			margin-left: 20px;
 			margin-right: 20px;
+		}
+	}
+	&.sort-destination-items-hardware-acc {
+		.isotope-item {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+// Firefox Fix
+html.gecko {
+	.sort-destination {
+		&.sort-destination-margin {
+			> [class*="col-"] {
+				margin: -1px;
+			}
 		}
 	}
 }

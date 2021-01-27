@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6, span, a {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-p, li, input, textarea {
+body {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,6 +40,7 @@ p, li, input, textarea {
 		color: #FFF !important;
 	}
 }
+
 /* Custom Porto SVG Logo (initial state for animation inside slide) */
 .custom-porto-svg-logo path {
 	fill-opacity: 0;
@@ -50,8 +51,7 @@ p, li, input, textarea {
 	transition: ease stroke-dashoffset 5s, ease fill-opacity 1s 1.7s;
 }
 
-/* Rev Slider - Custom Porto SVG Logo */
-.active-revslide .custom-porto-svg-logo path {
+.custom-porto-svg-logo.active path {
 	stroke-dashoffset: 0;
 	fill-opacity: 1;
 }
@@ -89,6 +89,7 @@ p, li, input, textarea {
 		border-left-width: 0;
 	}
 }
+
 /* Custom Brands Colors */
 .custom-spotify-hover-effect {
 	transition: ease background 300ms;
@@ -175,7 +176,7 @@ p, li, input, textarea {
 	line-height: 1.8;
 	padding: 1px 10px;
 	text-transform: uppercase;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 }
 
 .custom-card-style-1 .custom-card-img-top-wrapper .post-date .day {
@@ -186,7 +187,7 @@ p, li, input, textarea {
 	font-size: 18px;
 	font-weight: 900;
 	padding: 10px;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 }
 
 /* Custom SVG Line Animation */

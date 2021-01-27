@@ -18,11 +18,21 @@ html.boxed {
 	#header {
 		.header-body {
 			border-top-color: transparent;
+			border-top: 0;
 		}
 
 		&.header-effect-shrink {
 			.header-body {
 				max-width: 1200px;
+			}
+		}
+	}
+	&:not(.sticky-header-active) {
+		#header.header-effect-shrink {
+			&.header-transparent:not(.header-semi-transparent) {
+				.header-body {
+					// top: 25px !important;
+				}
 			}
 		}
 	}
@@ -45,6 +55,7 @@ html.boxed {
 		left: auto !important;
 	}
 }
+
 
 /* Responsive */
 @media (min-width: 1200px) {

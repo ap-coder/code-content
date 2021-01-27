@@ -4,7 +4,7 @@
 // Fonts
 $font-secondary: "Poppins", sans-serif;
 
-.body {
+body {
 	font-family: $font-secondary;
 }
 
@@ -482,6 +482,9 @@ html[dir="rtl"] {
 		&:hover {
 			a {
 				color: #333 !important;
+				> i[class*="text-color-"] {
+					color: #FFF !important;
+				}
 			}
 		}
 	} 

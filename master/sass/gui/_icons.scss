@@ -134,11 +134,15 @@ i.pi {
 }
 
 /* Icon Animated */
+[data-icon] {
+	opacity: 0;
+}
+
 .icon-animated {
 	opacity: 0;
 }
 
-/* Elements Sahadow Icon */
+/* Elements Shadow Icon */
 .elements-list-shadow-icon {
 	font-size: 4rem;
 	position: absolute;

@@ -22,6 +22,12 @@
 	padding: 10px 30px;
 }
 
+// Custom Border Bottom
+.custom-border-bottom-1 {
+	border-bottom: 1px solid #FFF;
+	padding-bottom: 3px;
+}
+
 // Rev Slider Dark Transparent Image Overlay
 .rev_slider {
 	.slotholder:after {
@@ -36,30 +42,31 @@
 	}
 }
 
-// Custom Tp Bullets - Rev Slider
-.tp-bullets {
-	.tp-bullet {
-		background: rgba(255,255,255,0.3);
-		border-radius: 100%;
-		border: 2px solid #fff;
-		opacity: 0.7;
-		padding: 7px;
+// Carousel Slider Dots
+.custom-dots-style-1 {
+	.owl-dots {
+		.owl-dot {
+			background: rgba(255, 255, 255, 0.2);
+		    border-radius: 100%;
+		    width: 20px;
+		    height: 20px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    border: 2px solid rgba(255, 255, 255, 0.7);
+		    > span {
+		    	background: transparent !important;
+		    }
 
-		&.selected {
-			opacity: 1 !important;
+		    &.active {
+		    	> span {
+			    	background: #FFF !important;
+			    }
+		    }
 
-			&::after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 6px;
-				height: 6px;
-				background: #fff;
-				border-radius: 100%;
-				transform: translateX(-50%) translateY(-50%);
-			}
+		    & + .owl-dot {
+		    	margin-top: 6px !important;
+		    }
 		}
 	}
 }

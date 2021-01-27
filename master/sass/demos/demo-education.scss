@@ -76,7 +76,7 @@ $font-primary: 'Montserrat', sans-serif;
 /*
 * General
 */
-h1, h2, h3, h4, h5, h6, a, p, span, li {
+body {
 	font-family: $font-primary;
 }
 
@@ -541,7 +541,7 @@ ul.custom-comments-style {
 * Footer
 */
 #footer {
-	p, a, li, span {
+	p, a:not(.btn):not(.no-footer-css), li, span {
 		color: #8d9097;
 		font-size: 14px;
 	}

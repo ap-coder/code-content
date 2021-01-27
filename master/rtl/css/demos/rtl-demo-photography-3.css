@@ -49,7 +49,7 @@
 }
 
 .default-font {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
 	font-size: inherit;
 }
 
@@ -307,7 +307,7 @@ html.sticky-header-active #header .header-body {
 }
 
 #main {
-	min-height: calc( 100vh - 167px );
+	min-height: calc( 100vh - 167px);
 }
 
 .slider-container {
@@ -1167,7 +1167,7 @@ html.sticky-header-active #header .header-body {
 #horizontalScrollBox {
 	position: relative;
 	width: 100%;
-	height: calc( 100vh - 183px );
+	height: calc( 100vh - 183px);
 	overflow-y: hidden;
 	overflow-x: scroll;
 }
@@ -1221,7 +1221,7 @@ html.sticky-header-active #header .header-body {
 
 #horizontalScrollBox .content .horizontal-scroll-item-wrapper .horizontal-scroll-item .thumb-info .thumb-info-wrapper img {
 	width: auto;
-	height: calc( 100vh - 223px );
+	height: calc( 100vh - 223px);
 }
 
 #horizontalScrollBox .content .horizontal-scroll-item-wrapper .horizontal-scroll-item .thumb-info .thumb-info-wrapper .thumb-info-plus {
@@ -1744,7 +1744,7 @@ section.photographers .owl-carousel .owl-nav {
 }
 
 .custom-thumb-info-photographers .social-icons li a {
-	background: transparent;
+	background: transparent !important;
 	width: 40px;
 	height: 40px;
 	border-color: #fff;
@@ -2256,7 +2256,8 @@ html.photography-demo-3.safari .body {
 }
 
 @media (min-width: 992px) {
-	html.photography-demo-3.side-header .main .container, html.photography-demo-3.side-header #footer .container {
+	html.photography-demo-3.side-header .main .container,
+		html.photography-demo-3.side-header #footer .container {
 		max-width: 1140px;
 	}
 }

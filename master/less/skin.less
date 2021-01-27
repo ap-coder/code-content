@@ -1,6 +1,12 @@
 @import "for";
 @import "mixins";
 
+// Selection
+::selection {
+	color: @color-primary-inverse;
+	background: @color-primary;
+}
+
 // Basic
 a {
 	color: @color-primary;
@@ -40,16 +46,18 @@ html {
 		@color:  extract(@value, 2);
 
 		.svg-fill-color-@{name} {
+			fill: @color !important;
 			svg {
-				path, rect {
+				path, rect, line, polyline, polygon {
 					fill: @color !important;
 				}
 			}
 		}
 
 		.svg-stroke-color-@{name} {
+			stroke: @color !important;
 			svg {
-				path, rect {
+				path, rect, line, polyline, polygon {
 					stroke: @color !important;
 				}
 			}
@@ -327,6 +335,15 @@ html {
 	}
 }
 
+// Overlay Color Gradient
+.overlay-gradient {
+	&:before {
+		background-color: @color-tertiary !important;
+		background-image: linear-gradient(to right, @color-tertiary 0%, @color-quaternary 100%) !important;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color-tertiary}', endColorstr='@{color-quaternary}', GradientType=1 );
+	}
+}
+
 // Buttons
 .btn-link {
 	color: @color-primary;
@@ -415,7 +432,7 @@ html {
 	}
 }
 
-// Button Gradient
+// Button Gradient (mix of primary and secondary color)
 .btn-gradient:not(.btn-outline) {
 
 	background: linear-gradient(135deg, @color-primary 0%, @color-secondary 80%);
@@ -468,8 +485,67 @@ html {
 
 	&:active,
 	&.active {
-		border-image: linear-gradient(135deg, darken(@color-primary, 7.5%) 0%, darken(@color-secondary, 7.5%) 80%) !important;
+		border-image: linear-gradient(135deg, darken(@color-primary, 7.5%) 0%, darken(@color-secondary, 7.5%) 80%);
 		color: darken(@color-primary, 7.5%);
+	}
+
+}
+
+// Button Gradient Primary (mix of primary and darken primary color)
+.btn-gradient-primary:not(.btn-outline) {
+
+	background: linear-gradient(135deg, lighten(@color-primary, 4%) 0%, darken(@color-primary, 2%) 80%);
+	color: @color-primary-inverse;
+
+	&:hover,
+	&.hover {
+		background: linear-gradient(135deg, lighten(@color-primary, 3%) 0%, lighten(@color-primary, 7.5%) 80%);
+		color: @color-primary-inverse;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 3px fade(@color-primary, 50%);
+	}
+
+	&.disabled,
+	&:disabled {
+		background: linear-gradient(135deg, lighten(@color-primary, 4%) 80%, darken(@color-primary, 2%) 0%);
+	}
+
+	&:active,
+	&.active {
+		background: linear-gradient(135deg, lighten(@color-primary, 3%) 0%, lighten(@color-primary, 7.5%) 80%) !important;
+		color: @color-primary-inverse !important;
+	}
+
+}
+
+.btn-gradient-primary.btn-outline {
+
+	border-image: linear-gradient(135deg, @color-primary 0%, lighten(@color-primary, 8%) 80%);
+	color: @color-primary;
+
+	&:hover,
+	&.hover {
+		border-image: linear-gradient(135deg, lighten(@color-primary, 7.5%) 0%, lighten(@color-primary, 7.5%) 80%);
+		color: lighten(@color-primary, 7.5%);
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 3px fade(@color-primary, 50%);
+	}
+
+	&.disabled,
+	&:disabled {
+		border-image: linear-gradient(135deg, @color-primary 0%, lighten(@color-primary, 8%) 80%);
+	}
+
+	&:active,
+	&.active {
+		border-image: linear-gradient(135deg, lighten(@color-primary, 7.5%) 0%, lighten(@color-primary, 7.5%) 80%);
+		color: lighten(@color-primary, 7.5%);
 	}
 
 }
@@ -529,6 +605,14 @@ body.dark .pagination > .active > a {
 .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: @color-primary;
+}
+
+// Custom Checkbox Switch
+.custom-checkbox-switch {
+	&:checked {
+		background-color: @color-primary;
+		border-color: @color-primary;
+	}
 }
 
 // Alerts
@@ -592,6 +676,16 @@ html {
 				.process-step-circle-content {
 					color: @color-primary-inverse !important;
 				}
+			}
+		}
+	}
+
+	// Process Shapes
+	&.process-shapes {
+		.process-step-circle {
+			.process-step-circle-content,
+			&:before, &:after {
+				background-color: @color-primary;
 			}
 		}
 	}
@@ -860,7 +954,7 @@ html {
 	color: @color-primary;
 }
 
-.owl-carousel .owl-nav button[class*="owl-"] {
+.owl-carousel:not(.nav-arrows-1):not(.show-nav-title) .owl-nav button[class*="owl-"] {
 
 	background-color: @color-primary;
 	border-color: @color-primary @color-primary darken(@color-primary, 10%);
@@ -883,7 +977,7 @@ html {
 
 .owl-carousel {
 	&.nav-with-transparency {
-		&:not(.nav-style-1):not(.show-nav-title) {
+		&:not(.nav-style-1):not(.show-nav-title):not(.nav-arrows-1) {
 			.owl-nav {
 				button[class*="owl-"] {
 					background-color: fade(@color-primary, 40%);
@@ -906,6 +1000,25 @@ html {
 				&:before, &:after {
 					border-color: @color-primary;
 				}
+			}
+		}
+	}
+	&.nav-svg-arrows-1 {
+		.owl-nav {
+			.owl-prev, .owl-next {
+				svg {
+					polygon {
+						fill: @color-primary;
+						stroke: @color-primary;
+					}
+				}
+			}
+		}
+	}
+	&.nav-arrows-1 {
+		.owl-nav {
+			.owl-prev, .owl-next {
+				color: @color-primary;
 			}
 		}
 	}
@@ -1030,6 +1143,23 @@ html.dark body {
 							&.active .nav-link,
 							&.active .nav-link:hover,
 							&.active .nav-link:focus {
+								border-bottom-color: @color;
+							}
+						}
+					}
+				}
+			}
+
+			&.tabs-simple {
+				.nav-tabs {
+					&,
+					&.nav-justified {
+						li {
+							.nav-link:hover,
+							&.active .nav-link,
+							&.active .nav-link:hover,
+							&.active .nav-link:focus {
+								color: @color !important;
 								border-bottom-color: @color;
 							}
 						}
@@ -2101,6 +2231,60 @@ html {
 	}
 }
 
+// Form Control
+.form-control {
+	.for(@colors-list); .-each(@value) {
+		@name:  extract(@value, 1);
+		@color:  extract(@value, 2);
+		@color-inverse:  extract(@value, 3);
+
+		&.bg-@{name},
+		&.bg-color-@{name} {
+			color: @color-inverse;
+			border-color: @color;
+
+			&::-webkit-input-placeholder {
+				color: darken(@color-inverse, 10%);
+			}
+
+			&::-moz-placeholder {
+				color: darken(@color-inverse, 10%);
+			}
+
+			&:-ms-input-placeholder {
+				color: darken(@color-inverse, 10%);
+			}
+
+			&:-moz-placeholder {
+				color: darken(@color-inverse, 10%);
+			}
+		}
+
+		.testimonial-@{name} {
+			blockquote {
+				background: lighten(@color, 5%);
+			}
+
+			.testimonial-arrow-down {
+				border-top-color: lighten(@color, 5%);
+			}
+
+			&.testimonial-style-7 {
+				background: lighten(@color, 5%);
+			}
+		}
+
+		.testimonial-quotes-@{name} {
+			blockquote {
+				&:before, &:after {
+					color: @color-primary !important;
+				}
+			}
+		}
+
+	}
+}
+
 // Counters
 html {
 	.for(@colors-list); .-each(@value) {
@@ -2686,6 +2870,35 @@ html {
 	.cart-totals tr.total .amount {
 		color: @color-primary;
 	}
+
+	.products {
+		.product {
+			.quick-view {
+				background: fade(@color-primary, 70%);
+			}
+			&:hover .quick-view {
+				&:hover {
+					background: @color-primary;
+				}
+			}
+		}
+	}
+}
+
+.product {
+	.product-thumb-info {
+		.addtocart-btn-wrapper {
+			.addtocart-btn {
+				&:hover {
+					color: @color-primary-inverse;
+					background: @color-primary;
+				}
+			}
+		}
+		.countdown-offer-wrapper {
+			background: @color-primary;
+		}
+	}
 }
 
 // Footer
@@ -2749,6 +2962,91 @@ html {
 		}
 	}
 }
+
+// Cursor Effect
+.cursor-inner {
+	background-color: @color-primary;
+	&.cursor-inner-plus {
+    	&:before {
+		    color: @color-primary;
+    	}
+    }
+}
+
+.cursor-outer {
+	border-color: @color-primary;
+}
+
+// Loading Overlay
+// Cubes
+.cssload-thecube {
+	.cssload-cube {
+		&:before {
+			background-color: @color-primary;
+		}
+	}
+}
+
+// CubeProgress
+.cssload-cube-progress {
+	border-color: @color-primary;
+}
+.cssload-cube-progress-inner {
+	background-color: @color-primary;
+}
+
+// Float Rings
+.cssload-float-rings-inner {
+	&.cssload-one {
+		border-bottom-color: @color-primary;
+	}
+	&.cssload-two {
+		border-right-color: @color-primary;
+	}
+	&.cssload-three {
+		border-top-color: @color-primary;
+	}
+}
+
+// Float Bars
+.cssload-float-bars-loading, 
+.cssload-float-bars-loading:after, 
+.cssload-float-bars-loading:before {
+	background: @color-primary;
+}
+
+// Speeding Wheel
+.cssload-speeding-wheel {
+	border-top-color: @color-primary;
+	border-bottom-color: @color-primary;
+}
+
+// Zenith
+.cssload-zenith {
+	box-shadow: 3px 3px 1px @color-primary;
+}
+
+// Spinning Square Effect
+.cssload-spinning-square-loading {
+	background: @color-primary;
+	&:before {
+		background: @color-secondary;
+	}
+	&:after {
+		background: @color-primary-inverse;
+	}
+}
+
+// Pulse Effect
+.cssload-pulse-loader {
+	background: @color-primary;
+}
+
+// Map Pin
+.map-rounded-pin {
+	background: @color-primary;
+}
+
 
 // Boxed
 html.boxed .body {
@@ -2846,8 +3144,6 @@ html.boxed .body {
 	#header .header-nav-main nav > ul > li.dropdown:hover > a,
 	#header .header-nav-top .dropdown-menu,
 	.slider-container .tparrows,
-	.nivo-slider .theme-default .nivoSlider,
-	.nivo-slider .theme-default .nivoSlider img,
 	.home-intro-compact,
 	html.dark #header,
 	html.boxed .body,

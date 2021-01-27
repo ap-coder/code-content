@@ -6,7 +6,7 @@
 */
 $font-primary: "Poppins", sans-serif;
 
-h1, h2, h3, h4, h5, h6, p, span, li, a, strong, input, textarea {
+body {
 	font-family: $font-primary;
 }
 
@@ -905,11 +905,6 @@ html.sticky-header-active {
 			width: 38px;
 			height: 38px;
 			line-height: 38px;
-		}
-		&:hover {
-			a {
-				color: #333 !important;
-			}
 		}
 	}
 }

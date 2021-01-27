@@ -1,7 +1,7 @@
 /*
 Name: 			Elements - Lightboxes - Examples
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 (function( $ ) {
@@ -11,80 +11,90 @@ Theme Version:	8.0.0
 	/*
 	Popup with video or map
 	*/
-	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
+	theme.fn.execOnceTroughEvent( $('.popup-youtube, .popup-vimeo, .popup-gmaps'), 'mouseover.trigger.iframe.lightbox', function(){
+		$(this).magnificPopup({
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
 
-		fixedContentPos: false
+			fixedContentPos: false
+		});
 	});
 
 	/*
 	Dialog with CSS animation
 	*/
-	$('.popup-with-zoom-anim').magnificPopup({
-		type: 'inline',
+	theme.fn.execOnceTroughEvent( $('.popup-with-zoom-anim'), 'mouseover.trigger.zoom.lightbox', function(){
+		$(this).magnificPopup({
+			type: 'inline',
 
-		fixedContentPos: false,
-		fixedBgPos: true,
+			fixedContentPos: false,
+			fixedBgPos: true,
 
-		overflowY: 'auto',
+			overflowY: 'auto',
 
-		closeBtnInside: true,
-		preloader: false,
+			closeBtnInside: true,
+			preloader: false,
 
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
 	});
 
-	$('.popup-with-move-anim').magnificPopup({
-		type: 'inline',
+	theme.fn.execOnceTroughEvent( $('.popup-with-move-anim'), 'mouseover.trigger.slide.lightbox', function(){
+		$(this).magnificPopup({
+			type: 'inline',
 
-		fixedContentPos: false,
-		fixedBgPos: true,
+			fixedContentPos: false,
+			fixedBgPos: true,
 
-		overflowY: 'auto',
+			overflowY: 'auto',
 
-		closeBtnInside: true,
-		preloader: false,
+			closeBtnInside: true,
+			preloader: false,
 
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-slide-bottom'
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-slide-bottom'
+		});
 	});
 
 	/*
 	Form
 	*/
-	$('.popup-with-form').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#name',
-		callbacks: {
-			open: function() {
-				$('html').addClass('lightbox-opened');
-			},
-			close: function() {
-				$('html').removeClass('lightbox-opened');
+	theme.fn.execOnceTroughEvent( $('.popup-with-form'), 'mouseover.trigger.form.lightbox', function(){
+		$(this).magnificPopup({
+			type: 'inline',
+			preloader: false,
+			focus: '#name',
+			callbacks: {
+				open: function() {
+					$('html').addClass('lightbox-opened');
+				},
+				close: function() {
+					$('html').removeClass('lightbox-opened');
+				}
 			}
-		}
+		});
 	});
 
 	/*
 	Ajax
 	*/
-	$('.simple-ajax-popup').magnificPopup({
-		type: 'ajax',
-		callbacks: {
-			open: function() {
-				$('html').addClass('lightbox-opened');
-			},
-			close: function() {
-				$('html').removeClass('lightbox-opened');
+	theme.fn.execOnceTroughEvent( $('.simple-ajax-popup'), 'mouseover.trigger.ajax.lightbox', function(){
+		$(this).magnificPopup({
+			type: 'ajax',
+			callbacks: {
+				open: function() {
+					$('html').addClass('lightbox-opened');
+				},
+				close: function() {
+					$('html').removeClass('lightbox-opened');
+				}
 			}
-		}
+		});
 	});
 
 }).apply( this, [ jQuery ]);

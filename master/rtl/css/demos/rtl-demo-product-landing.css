@@ -1,5 +1,13 @@
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Oswald", sans-serif;
+@charset "UTF-8";
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 1200px) {
+	.container:not(.container-lg-custom):not(.container-xl-custom) {
+		max-width: 1200px;
+	}
 }
 
 .custom-absolute-y-center {
@@ -14,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-border-color-2 {
 	border-color: #44494e !important;
+}
+
+.custom-border-color-3 {
+	border-color: #f4f4f4 !important;
 }
 
 .custom-filter-grayscale-1 {
@@ -31,44 +43,103 @@ h1, h2, h3, h4, h5, h6 {
 		border-left: 0 !important;
 	}
 }
-/* Header */
-#header .header-nav-main nav > ul > li > a {
-	font-family: "Oswald", sans-serif;
-	font-weight: 400;
-	font-size: 0.85rem;
-	letter-spacing: 0.5px;
+
+.custom-bg-color-grey-1 {
+	background-color: #eff1f3 !important;
 }
 
-#header .header-nav-main-arrows nav > ul > li > a.dropdown-toggle:after {
-	margin-top: 3px;
+.custom-font-size-1 {
+	font-size: 0.55em;
+}
+
+.custom-font-size-2 {
+	font-size: 0.35em;
+}
+
+.custom-letter-spacing-1 {
+	letter-spacing: 5px;
+}
+
+.custom-letter-spacing-2 {
+	letter-spacing: 3px;
+}
+
+@media (max-width: 575px) {
+	.custom-xs-margin-top-1 {
+		margin-top: -80px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.custom-xl-margin-top-1 {
+		margin-top: -70px;
+	}
+}
+
+/* Header */
+#header {
+	top: 0;
+}
+
+#header .header-nav-main nav > ul > li > a {
+	font-weight: 600;
+	font-size: 0.85rem;
+	letter-spacing: 0;
+	text-transform: none;
 }
 
 #header .list > li > a {
-	font-family: "Oswald", sans-serif;
 	font-weight: 400;
 	font-size: 0.85rem;
 	letter-spacing: 0.5px;
 	color: #212529;
 }
 
-@media (min-width: 992px) {
+#header .header-nav.header-nav-line .header-nav-main nav > ul > li:hover.no-line-effect > a:before, #header .header-nav.header-nav-line .header-nav-main nav > ul > li.active.no-line-effect > a:before {
+	content: none;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
 	#header .header-nav-main nav > ul > li > a {
-		padding: 0 1.2rem !important;
+		padding: 0 1rem !important;
 	}
 }
+
+@media (min-width: 1200px) {
+	#header .header-nav-main nav > ul > li > a {
+		padding: 0 1.1rem !important;
+	}
+}
+
+html:not(.sticky-header-active) #header .header-body.header-border-bottom {
+	border-bottom: 0;
+}
+
 /* Custom Section Padding */
 @media (min-width: 992px) {
 	.custom-section-padding-1 {
 		padding: 10vw 0 !important;
 	}
 }
+
 /* Custom Product Image Styles */
 @media (min-width: 1200px) {
 	.custom-product-image-style-1 {
 		position: absolute;
-		bottom: -37px;
-		right: 0;
-		max-width: calc(100% + 140px);
+		top: 81%;
+		right: 130px;
+		transform: translate3d(0, -50%, 0);
+	}
+
+	.custom-product-image-style-1 img {
+		max-width: calc(100% + 740px);
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.custom-product-image-style-1 img {
+		margin-left: 140px;
+		max-width: 170%;
 	}
 }
 
@@ -82,6 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 		width: 47vw;
 	}
 }
+
 /* Custom Icons */
 .custom-icon-left-arrows,
 .custom-icon-right-arrows {
@@ -133,18 +205,19 @@ h1, h2, h3, h4, h5, h6 {
 		min-width: 140px;
 	}
 }
+
 /* Custom Play Button */
 .custom-play-button-1 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	border-radius: 100%;
 	background: #FFF;
 	color: #212529;
 	transition: ease transform 300ms;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 }
 
 .custom-play-button-1:hover {
@@ -164,11 +237,6 @@ h1, h2, h3, h4, h5, h6 {
 	border-right: 0;
 }
 
-/* Rating Size */
-.rating-container {
-	font-size: 12px !important;
-}
-
 /* Custom SVG Line Animation */
 @keyframes customSVGLineAnim {
 	from {
@@ -178,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	to {
 		stroke-dasharray: 500;
-		stroke-dashoffset: 350;
+		stroke-dashoffset: 230;
 	}
 }
 
@@ -200,4 +268,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .customSVGLineAnimTwo {
 	animation-name: customSVGLineAnimTwo;
+}
+
+/* 360º Product Viewer */
+.cd-product-viewer-handle .handle {
+	border: none;
+}
+
+.cd-product-viewer-handle .fill {
+	background-color: #e8e9e9;
 }

@@ -1,7 +1,7 @@
 /*
 Name: 			RealEstate
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.0.0
+Theme Version:	8.3.0
 */
 
 'use strict';
@@ -104,14 +104,9 @@ var listingLoadMore = {
 
 			// Lazy Load
 			if(self.$btn.hasClass('btn-listing-lazy-load')) {
-				self.$btn.appear(function() {
-					self.$btn.trigger('click');
-				}, {
-					data: undefined,
-					one: false,
-					accX: 0,
-					accY: 0
-				});
+				theme.fn.intObs( '#listingLoadMore', "$('#listingLoadMore').trigger('click');", {
+					rootMargin: '0px 0px 0px 0px'
+				} );
 			}
 
 			// Relayout Isotope on resize

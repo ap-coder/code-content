@@ -1,7 +1,7 @@
 /*
 * Demo General Styles
 */
-h1, h2, h3, h4, h5, h6, p, a, span, input, strong, label {
+body {
 	font-family: "Poppins", sans-serif;
 }
 
@@ -176,48 +176,51 @@ html .scroll-to-top.visible {
 /*
 * Social Icons
 */
-.social-icons.custom-social-icons-style-1 li {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-1 li {
 	margin: 0;
 	box-shadow: none;
 }
 
-.social-icons.custom-social-icons-style-1 li a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-1 li a {
 	background: transparent !important;
 	color: #FFF !important;
 }
 
-.social-icons.custom-social-icons-style-1 li:hover.social-icons-facebook a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-1 li:hover.social-icons-facebook a {
 	color: #3b5a9a !important;
 }
 
-.social-icons.custom-social-icons-style-1 li:hover.social-icons-twitter a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-1 li:hover.social-icons-twitter a {
 	color: #1aa9e1 !important;
 }
 
-.social-icons.custom-social-icons-style-1 li:hover.social-icons-linkedin a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-1 li:hover.social-icons-linkedin a {
 	color: #0073b2 !important;
 }
 
-.social-icons.custom-social-icons-style-2 li {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-2 li {
 	margin: 0;
 	box-shadow: none;
 }
 
-.social-icons.custom-social-icons-style-2 li a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-2 li a {
 	background: transparent !important;
 	color: #3c3f44 !important;
 }
 
-.social-icons.custom-social-icons-style-2 li:hover.social-icons-facebook a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-2 li:hover.social-icons-facebook a {
 	color: #3b5a9a !important;
+	background: transparent !important;
 }
 
-.social-icons.custom-social-icons-style-2 li:hover.social-icons-twitter a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-2 li:hover.social-icons-twitter a {
 	color: #1aa9e1 !important;
+	background: transparent !important;
 }
 
-.social-icons.custom-social-icons-style-2 li:hover.social-icons-linkedin a {
+.social-icons:not(.social-icons-opacity-light):not(.social-icons-transparent):not(.social-icons-clean):not(.social-icons-dark):not(.social-icons-dark-2).custom-social-icons-style-2 li:hover.social-icons-linkedin a {
 	color: #0073b2 !important;
+	background: transparent !important;
 }
 
 /*
@@ -458,6 +461,7 @@ html.sticky-header-active #header .header-body {
 		right: 0;
 	}
 }
+
 /*
 * Who We Are
 */
