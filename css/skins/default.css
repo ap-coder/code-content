@@ -262,7 +262,7 @@ html .bg-color-hover-before-primary:before:hover {
 
 html .bg-color-secondary,
 html .bg-secondary {
-	background-color: #e36159 !important;
+	background-color:#AE2025 /*#e36159*/ !important;
 }
 
 html .bg-color-hover-secondary:hover,

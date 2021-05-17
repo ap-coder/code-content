@@ -146,10 +146,9 @@ if(isset($_POST['emailSent'])) {
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
-		<script src="vendor/modernizr/modernizr.min.js"></script>
-
+		<script src="vendor/modernizr/modernizr.min.js"></script>
 	</head>
-	<body>
+	<body data-plugin-page-transition>
 
 		<div class="body">
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': true, 'stickyStartAt': 70, 'stickyChangeLogo': false, 'stickyHeaderContainerHeight': 70}">
@@ -516,6 +515,10 @@ if(isset($_POST['emailSent'])) {
 
 		<!-- Theme Base, Components and Settings -->		<script src="js/theme.js"></script>
 
+		<!-- devcode: !production -->
+		<a class="envato-buy-redirect" href="https://themeforest.net/checkout/from_item/4106987?license=regular&support=bundle_6month&ref=Okler" target="_blank" data-toggle="tooltip" data-placement="right" title="Buy Porto"><i class="fas fa-shopping-cart"></i></a>
+		<a class="demos-redirect" href="index.html#demos" data-toggle="tooltip" data-placement="right" title="Demos"><img src="img/icons/demos-redirect.png" class="img-fluid" /></a>
+		<!-- endcode -->
 		<!-- Theme Custom -->		<script src="js/custom.js"></script>
 
 		<!-- Theme Initialization Files -->
@@ -605,18 +608,6 @@ if(isset($_POST['emailSent'])) {
 			mapRef.setMapTypeId('map_style');
 
 		</script>
-
-		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-12345678-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-		 -->
 
 	</body>
 </html>

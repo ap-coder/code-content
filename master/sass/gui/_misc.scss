@@ -170,7 +170,7 @@ html[xmlns] .clearfix {
 }
 
 .box-shadow-4 {
-    box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.2);
 }
 
 .box-shadow-5 {
@@ -180,261 +180,6 @@ html[xmlns] .clearfix {
 /* Border Radius */
 .border-radius {
 	border-radius: 4px !important;
-}
-
-/* Sample Item */
-.sample-item-container {
-	max-width: 1648px;
-}
-
-.sample-item-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	opacity: 0;
-	li {
-		text-align: center;
-	}
-	&.sample-item-list-loaded {
-		opacity: 1;
-	}
-}
-
-.sample-item {
-	text-align: center;
-	max-width: 500px;
-	width: 100%;
-	display: inline-block;
-	margin-bottom: 35px;
-	a {
-		text-decoration: none !important;
-	}
-	.owl-carousel {
-		margin-bottom: 0;
-		box-shadow: 10px 10px 74px -15px rgba(0,0,0,0.1);
-		position: relative;
-		height: 22.8vw;
-		max-height: 365px;
-		display: block !important;
-		overflow: hidden;
-		transition: box-shadow 0.3s ease;
-		&:hover {
-			box-shadow: 10px 10px 74px -15px rgba(0,0,0,0.4);
-		}
-		.sample-item-image-wrapper {
-			box-shadow: none;
-		}
-		.owl-item {
-			> div {
-				height: 365px;
-				max-height: 365px;
-			}
-		}
-		.owl-nav {
-			button.owl-prev,
-			button.owl-next {
-				border: 0 none;
-				border-radius: corner-values(0 4px 4px 0);
-				color: #777;
-				height: 50px;
-				line-height: 38px;
-				margin-top: 0;
-				transition: all 0.3s ease;
-				&:hover, &:focus {
-					color: #000 !important;
-				}
-				&:before {
-					font-size: 11px;
-				}
-			}
-			button.owl-prev {
-				background-color: #E7E7E7;
-				@include if-ltr() {
-					transform: translate3d(-30px,0,0);
-				}
-				@include if-rtl() {
-					transform: translate3d(30px,0,0);
-				}
-				&:hover, &:focus {
-					background-color: #E7E7E7 !important;
-				}
-			}
-			button.owl-next {
-				background-color: #E7E7E7;
-				@include if-ltr() {
-					transform: translate3d(30px,0,0);
-				}
-				@include if-rtl() {
-					transform: translate3d(-30px,0,0);
-				}
-				border-radius: corner-values(4px 0 0 4px);
-				&:hover, &:focus {
-					background-color: #E7E7E7 !important;
-				}
-			}
-		}
-		&:hover {
-			.owl-nav {
-				button.owl-prev {
-					transform: translate3d(0,0,0);
-				}
-				button.owl-next {
-					transform: translate3d(0,0,0);
-				}
-			}
-		}
-	}
-	.sample-item-image-wrapper {
-		background: #FFF;
-		height: 22vw;
-		max-height: 365px;
-		max-width: 500px;
-		width: 100%;
-		display: inline-block;
-		border: none;
-		box-shadow: 10px 10px 74px -15px rgba(0,0,0,0.1);
-		position: relative;
-		transition: box-shadow 0.3s ease;
-		.fa-spin {
-			background: transparent none repeat scroll 0 0;
-			color: #ccc;
-			font-size: 25px;
-			left: 50%;
-			margin: -13px;
-			position: absolute;
-			top: 50%;
-			z-index: 1;
-		}
-	}
-
-	a:hover {
-		.sample-item-image-wrapper {
-			box-shadow: 10px 10px 74px -15px rgba(0,0,0,0.4);
-		}
-	}
-
-	.sample-item-image {
-		height: 22.8vw;
-		max-height: 365px;
-		max-width: 500px;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-position: center top;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		z-index: 2;
-	}
-
-	.sample-item-description {
-		display: block;
-		padding: 15px 0;
-	}
-
-	h5 {
-		padding: 0;
-		margin: 0;
-		font-size: 14px;
-		.sample-item-info {
-			display: block;
-			font-size: 11px;
-			opacity: 0.6;
-		}
-	}
-	p {
-		padding: 0;
-		margin: 0;
-		font-size: 12px;
-	}
-
-	&.sample-item-home {
-		.sample-item-image-wrapper {
-			height: 13.9vw;
-		}
-
-		.sample-item-image-wrapper,
-		.sample-item-image {
-			max-height: 260px;
-		}
-	}
-
-	&.sample-item-coming-soon {
-		.sample-item-image {
-			background-color: #FBFBFB;
-			background-position: center center;
-		}
-	}
-
-	&.sample-item-coming-soon.sample-item-home {
-		.sample-item-image {
-			height: 15vw;
-		}
-	}
-}
-
-@media (max-width: 991px) {
-	.sample-item {
-		.sample-item-image-wrapper, .owl-carousel {
-			height: 33vw;
-		}
-		.sample-item-image {
-			height: 34vw;
-		}
-
-		&.sample-item-home {
-			.sample-item-image-wrapper {
-				height: 30vw;
-			}
-			.sample-item-image {
-				height: 30vw;
-			}
-		}
-
-		&.sample-item-coming-soon.sample-item-home {
-			.sample-item-image {
-				height: 30vw;
-			}
-		}
-
-	}
-}
-
-@media (max-width: 767px) {
-	.sample-item {
-
-		.sample-item-image-wrapper, .owl-carousel {
-			height: 63.4vw;
-		}
-		.sample-item-image {
-			height: 67.5vw;
-		}
-
-		&.sample-item-home {
-			.sample-item-image-wrapper {
-				height: 63.4vw;
-				max-height: 345px;
-			}
-			.sample-item-image {
-				height: 67.5vw;
-				max-height: 345px;
-			}
-		}
-
-		&.sample-item-coming-soon.sample-item-home {
-			.sample-item-image {
-				height: 63.4vw;
-			}
-		}
-	}
-}
-
-/* Sample Sub Items Lightbox */
-.sample-sub-items-lightbox {
-	margin: 0 auto;
-	max-width: 1650px;
-	padding: 10vh 10px 50px;
-	width: 100%;
 }
 
 /* Magnific Popup Demo Options */
@@ -534,11 +279,11 @@ html[xmlns] .clearfix {
 		&.pagination-md {
 			.page-link {
 				padding: 0;
-			    width: 40px;
-			    text-align: center;
-			    height: 40px;
-			    line-height: 40px;
-			    font-size: 1rem;
+				width: 40px;
+				text-align: center;
+				height: 40px;
+				line-height: 40px;
+				font-size: 1rem;
 			}
 		}
 
@@ -858,47 +603,6 @@ html[xmlns] .clearfix {
 	}
 }
 
-/* Go to Demos */
-.go-to-demos {
-	transition: padding 0.3s ease;
-	background-color: #EEE;
-	border-radius: 0 6px 6px 0;
-	color: #888 !important;
-	display: block;
-	font-size: 10px;
-	height: 40px;
-	left: 0;
-	line-height: 40px;
-	padding: 0 15px 0 10px;
-	position: fixed;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	top: 190px;
-	width: auto;
-	z-index: 999;
-	[class*="fa-"] {
-		transition: left 0.3s ease;
-		display: inline-block;
-		padding-right: 5px;
-		position: relative;
-		left: 0;
-	}
-	&:hover {
-		text-decoration: none;
-		padding-left: 25px;
-		[class*="fa-"] {
-			left: -7px;
-		}
-	}
-}
-
-@media (max-width: 991px) {
-	.go-to-demos {
-		display: none;
-	}
-}
-
 /* Notice Top Bar */
 .notice-top-bar {
 	position: fixed;
@@ -983,11 +687,11 @@ html[xmlns] .clearfix {
 	width: 100% !important;
 	z-index: 11;
 	.sticky-body {
-	    display: flex;
-	    background: #FFF;
-	    width: 100%;
-	    z-index: 10;
-	    transition: ease background 300ms;
+		display: flex;
+		background: #FFF;
+		width: 100%;
+		z-index: 10;
+		transition: ease background 300ms;
 	}
 	&.sticky-wrapper-transparent {
 		.sticky-body {
@@ -1056,7 +760,7 @@ html[xmlns] .clearfix {
 			animation-name: pencilAnimation;
 			animation-duration: 500ms;
 			animation-delay: 2s;
-		    animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
 			overflow: hidden;
 			transform: rotate(180deg);
 		}
@@ -1098,7 +802,7 @@ html[xmlns] .clearfix {
 
 	&.highlighted-word-rotate {
 		transform: rotate(-15deg);
-	    transform-origin: 0 0;
+		transform-origin: 0 0;
 	}
 }
 
@@ -1107,23 +811,23 @@ html[xmlns] .clearfix {
 	position: relative;
 	min-height: 7.2vw;
 	&:after {
-	    content: '';
-	    background-image: url(../img/curved-border.svg);
-	    background-size: 100% 100%;
-	    background-position: center;
-	    position: absolute;
-	    left: 0;
-	    bottom: -2px;
-	    width: 100vw;
-	    height: 7.2vw;
-	    z-index: 20;
+		content: '';
+		background-image: url(../img/curved-border.svg);
+		background-size: 100% 100%;
+		background-position: center;
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		width: 100vw;
+		height: 7.2vw;
+		z-index: 20;
 	}
 
 	&.curved-border-top {
 		&:after {
 			top: -2px;
 			bottom: auto;
-		    transform: rotateX(180deg);
+			transform: rotateX(180deg);
 		}
 	}
 
@@ -1133,7 +837,7 @@ html[xmlns] .clearfix {
 .vertical-divider {
 	display: inline;
 	border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid transparent;
+	border-right: 1px solid transparent;
 }
 
 /* Star Rating */
@@ -1184,7 +888,7 @@ html[xmlns] .clearfix {
 		height: 28px;
 		margin:  -0.666em auto auto -0.666em;
 		background: #CCC;
-	  	border-radius: 50%;
+		border-radius: 50%;
 		opacity: 0.6;
 		transform-origin:  50% 50%;
 		transition: opacity .2s ease-in, transform .1s ease-out;
@@ -1333,15 +1037,15 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 			width: 4px;
 			height: 20px;
 			background: #FFF;
-		    transform: translate3d(-50%, -50%, 0);
+			transform: translate3d(-50%, -50%, 0);
 			&:before, &:after {
-			    content: '';
-			    position: absolute;
-			    top: 50%;
-			    width: 4px;
-			    height: 60%;
-			    background: #FFF;
-			    transform: translate3d(0, -50%, 0);
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 4px;
+				height: 60%;
+				background: #FFF;
+				transform: translate3d(0, -50%, 0);
 			}
 			&:before {
 				left: -8px;
@@ -1362,52 +1066,16 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 
 @keyframes cd-bounce {
 	0% {
-	    transform: translateX(-50%) scale(0);
+		transform: translateX(-50%) scale(0);
 	}
 
 	60% {
-	    transform: translateX(-50%) scale(1.1);
+		transform: translateX(-50%) scale(1.1);
 	}
 
 	100% {
-	    transform: translateX(-50%) scale(1);
+		transform: translateX(-50%) scale(1);
 	
-	}
-}
-
-/* Recommended Themes */
-.recommend-themes {
-	background: #000;
-	padding: 15px 0;
-	position: fixed;
-	z-index: 9;
-	left: 0;
-	width: 100%;
-	bottom: 0;
-	box-shadow: 0 -3px 1px 0 rgba(0, 0, 0, 0.3);
-	transform: translateY(110%);
-	transition: transform 0.8s ease;
-	&.active {
-		transform: translateY(0);
-	}
-	p {
-		padding-right: 10px;
-		font-size: 12px;
-		font-weight: 600;
-		color: #777;
-		margin: 0 4px;
-	}
-	.btn {
-		background-color: #181818;
-		font-size: 12px;
-		font-weight: 600;
-		border: none;
-		padding: 10px 20px;
-		border-radius: 40px;
-		margin: 0 4px;
-		&:hover {
-			background-color: #242424;
-		}
 	}
 }
 
@@ -1570,15 +1238,15 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 
 /* PORTO Big Title */
 .porto-big-title {
-    letter-spacing: -22px;
-    font-size: 9rem;
-    line-height: 0.8;
+	letter-spacing: -22px;
+	font-size: 9rem;
+	line-height: 0.8;
 }
 
 @media(max-width: 575px) {
 	.porto-big-title {
-	    letter-spacing: -18px;
-	    font-size: 7rem;
+		letter-spacing: -18px;
+		font-size: 7rem;
 	}
 }
 
@@ -1615,48 +1283,48 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 /* Style Switcher Open Loader Button */
 .style-switcher-open-loader {
 	color: #FFF !important;
-    background-color: #151719;
-    display: block;
-    height: 40px;
-    position: fixed;
-    left: 0;
-    top: 135px;
-    width: 40px;
-    font-size: 12px;
-    line-height: 40px;
-    color: #FFF;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0 4px 4px 0;
-    z-index: 9999;
+	background-color: #151719;
+	display: block;
+	height: 40px;
+	position: fixed;
+	left: 0;
+	top: 135px;
+	width: 40px;
+	font-size: 12px;
+	line-height: 40px;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0 4px 4px 0;
+	z-index: 9999;
 
-    &.style-switcher-open-loader-loading {
-    	> i {
-		    animation-name: basicRotation;
-		    animation-duration: 1.5s;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
-    		&:before {
-    			content: "\f1ce";
-    		}
-    	}
-    }
+	&.style-switcher-open-loader-loading {
+		> i {
+			animation-name: basicRotation;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			&:before {
+				content: "\f1ce";
+			}
+		}
+	}
 
-    .style-switcher-tooltip {
+	.style-switcher-tooltip {
 		visibility: hidden;
 		opacity: 0;
-	    position: absolute;
-	    top: 50%;
-	    left: calc(100% + 20px);
-	    width: 200px;
-	    background: #282d31;
-	    text-align: left;
-	    padding: 1.4rem;
-	    border-radius: 4px;
-	    box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.2);
-	    transform: translate3d(-20px, -50%, 0);
-	    transition: ease opacity 300ms, ease transform 300ms;
-	    &:before {
+		position: absolute;
+		top: 50%;
+		left: calc(100% + 20px);
+		width: 200px;
+		background: #282d31;
+		text-align: left;
+		padding: 1.4rem;
+		border-radius: 4px;
+		box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.2);
+		transform: translate3d(-20px, -50%, 0);
+		transition: ease opacity 300ms, ease transform 300ms;
+		&:before {
 			content: '';
 			display: block;
 			position: absolute;
@@ -1671,19 +1339,19 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 		}
 
 		> strong {
-		    font-size: 0.85rem;
-		    font-family: "Open Sans";
-		    line-height: 1.3;
-		    display: block;
-		    margin-bottom: 0.5rem;
+			font-size: 0.85rem;
+			font-family: "Open Sans";
+			line-height: 1.3;
+			display: block;
+			margin-bottom: 0.5rem;
 		}
 
 		> p {
-		    color: #e2e2e2;
-		    font-size: 0.8rem;
-		    line-height: 1.5;
-		    margin-bottom: 0;
-		    opacity: 0.8;
+			color: #e2e2e2;
+			font-size: 0.8rem;
+			line-height: 1.5;
+			margin-bottom: 0;
+			opacity: 0.8;
 		}
 
 		&.active {
@@ -1696,6 +1364,39 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 
 @media(max-width: 767px) {
 	.style-switcher-open-loader {
+		display: none;
+	}
+}
+
+/* Envato Buy Redirect and Demos */
+.envato-buy-redirect, .demos-redirect {
+	color: #FFF !important;
+	background-color: #151719;
+	display: block;
+	height: 40px;
+	position: fixed;
+	left: 0;
+	top: 176px;
+	width: 40px;
+	font-size: 12px;
+	line-height: 40px;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0 4px 4px 0;
+	z-index: 9998;
+}
+
+.demos-redirect {
+	top: 217px;
+	img {
+		max-width: 16px;
+		max-height: 16px;
+	}
+}
+
+@media(max-width: 767px) {
+	.envato-buy-redirect, .demos-redirect {
 		display: none;
 	}
 }
@@ -1745,29 +1446,29 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 }
 
 .cursor-inner {
-    position: fixed;
-    left: 17px;
-    top: 17px;
-    width: 6px;
-    height: 6px;
-    background: #CCC;
-    border-radius: 100%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all .08s ease-out;
-    &.cursor-inner-plus {
-    	display: flex;
-    	align-items: center;
-    	justify-content: center;
-    	background-color: transparent !important;
-    	&:before {
-	    	content: '+';
-		    color: #FFF;
-		    font-size: 1.7rem;
-    	}
-    }
-    &.cursor-color-light {
-    	&:not(.cursor-inner-plus) {
+	position: fixed;
+	left: 17px;
+	top: 17px;
+	width: 6px;
+	height: 6px;
+	background: #CCC;
+	border-radius: 100%;
+	pointer-events: none;
+	z-index: 9999;
+	transition: all .08s ease-out;
+	&.cursor-inner-plus {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent !important;
+		&:before {
+			content: '+';
+			color: #FFF;
+			font-size: 1.7rem;
+		}
+	}
+	&.cursor-color-light {
+		&:not(.cursor-inner-plus) {
 			background-color: #FFF !important;
 		}
 		&.cursor-inner-plus:before {
@@ -1809,10 +1510,10 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 		height: 4px;
 		left: 18px;
 		&.cursor-inner-plus {
-	    	&:before {
-			    font-size: 1.1rem;
-	    	}
-	    }
+			&:before {
+				font-size: 1.1rem;
+			}
+		}
 	}
 }
 
@@ -1828,10 +1529,10 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 		width: 8px;
 		height: 8px;
 		&.cursor-inner-plus {
-	    	&:before {
-			    font-size: 2.6rem;
-	    	}
-	    }
+			&:before {
+				font-size: 2.6rem;
+			}
+		}
 	}
 }
 
@@ -1841,7 +1542,7 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 	}
 
 	.cursor-inner {
-	    border-radius: 0;
+		border-radius: 0;
 	}
 }
 
@@ -1850,20 +1551,20 @@ Credits: Codyhouse (https://codyhouse.co/gem/360-degrees-product-viewer)
 	.btn {
 		position: relative;
 		&:before {
-		    content: 'Copy to Clipboard';
-		    position: absolute;
-		    top: -41px;
-		    left: 50%;
-		    background: #212121;
-		    border-radius: 4px;
-		    transform: translate3d(-50%, 0, 0);
-		    opacity: 0;
-		    display: none;
-		    transition: ease opacity 300ms;
-		    white-space: nowrap;
-		    padding: 6px 14px;
-		    font-size: 0.75rem;
-		    z-index: 10;
+			content: 'Copy to Clipboard';
+			position: absolute;
+			top: -41px;
+			left: 50%;
+			background: #212121;
+			border-radius: 4px;
+			transform: translate3d(-50%, 0, 0);
+			opacity: 0;
+			display: none;
+			transition: ease opacity 300ms;
+			white-space: nowrap;
+			padding: 6px 14px;
+			font-size: 0.75rem;
+			z-index: 10;
 		}
 		&:after {
 			content: '';
